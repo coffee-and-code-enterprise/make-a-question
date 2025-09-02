@@ -6,24 +6,60 @@ no código, logo altere com CUIDADO.
 ---------------------------------------
 */
 
+/* Importando a fonte Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  /* Criando variáveis para todo o site */
+  --text: #333;
+  --bg: #fafafa;
+
+  /* Cores que estão no nosso Miro */
+  --marian-blue: #29447D;
+  --crayola-blue: #4E79D6;
+  --picton-blue: #5FADDE;
+  --platinum: #E7E4E1;
+  --isabelline: #F3F2EE;
+
+
+  /* Configurando as fontes */
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5rem;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Definindo cores iniciais */
+  color-scheme: dark light;
+  color: var(--text);
+  background-color: var(--bg);
 
+  /* Melhoria na renderização das fontes */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: light) {
+/* O ideal é evitar usar esse seletor global, se a performance cair a gente vê o que faz */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: var(--crayola-blue);
+}
+
+/* Mudando as cores dependendo do que tema do usuário */
+@media (prefers-color-scheme: dark) {
+  /* Mudando as cores padrão */
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --text: #ffffff;
+    --bg: #1a1a1a;
+  }
+
+  /* Mudando cores específicas */
+  h2 {
+    color: var(--picton-blue);
   }
 }

@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg);
+  min-height: 60px;
+  padding: 20px 0;
+}
+
+.headerContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 0 2vw;
+}
+
+.headerContent li {
+  list-style: none;
+}
+
+.headerContent a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.logo {
+  display: flex;
+  width: 120px;
+}
+

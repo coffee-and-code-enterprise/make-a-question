@@ -1,3 +1,5 @@
+import styles from "./Answers.module.css";
+
 function Answers() {
 	return (
 		<main>

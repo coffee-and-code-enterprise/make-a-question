@@ -28,8 +28,11 @@ function App() {
         <Route path="/introduction" element={<Introduction />} />
         <Route path="/settings" element={<Settings />}/>
       </Routes>
-
+          
       {/* Footer ficará aqui */}
+      <footer>
+          <p>&copy; {new Date().getFullYear()} Make A Question</p>
+      </footer>
     </BrowserRouter>
   )
 }

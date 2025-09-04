@@ -1,0 +1,16 @@
+git pull	Baixa e mescla as alterações do repositório remoto.	Na maioria das situações, para uma atualização rápida e direta.
+git fetch	Apenas baixa as alterações do repositório remoto.	Quando você quer ver as alterações antes de aplicá-las ao seu trabalho local.
+git merge	Mescla as alterações (previamente buscadas com fetch) ao seu branch.	Após um git fetch, para integrar as alterações mantendo um registro da mesclagem.
+git rebase	Reaplica seus commits locais sobre as alterações remotas (previamente buscadas).	Após um git fetch, para um histórico de commits mais limpo e linear.
+
+# 1. Ver o que mudou
+git status
+
+# 2. Adicionar todos os arquivos modificados para a área de preparação
+git add .
+
+# 3. Criar um "pacote" com uma mensagem descritiva
+git commit -m "Minha descrição da mudança aqui"
+
+# 4. Enviar o pacote para o servidor remoto
+git push origin main

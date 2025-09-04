@@ -22,8 +22,11 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-
+          
       {/* Footer ficará aqui */}
+      <footer>
+          <p>&copy; {new Date().getFullYear()} Make A Question</p>
+      </footer>
     </BrowserRouter>
   )
 }

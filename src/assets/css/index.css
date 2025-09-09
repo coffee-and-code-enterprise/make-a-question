@@ -77,8 +77,8 @@ input[type="text"] {
 @media (prefers-color-scheme: dark) {
   /* Mudando as cores padrão */
   :root {
-    --text: #ffffff;
-    --bg: #1a1a1a;
+    --text: #eee;
+    --bg: #242428;
   }
 
   /* Mudando cores específicas */

@@ -12,19 +12,21 @@ import logo from '/logos/logo_makeaquestion_white.png'
 function Introduction() {
     return (
         <main>
-            <section className={styles.heroSection}>
-                <div className={styles.sectionTitle}>
-                    <img src={logo} alt="Logo MakeAQuestion"/>
-                    <h4>A dúvida é o motor do conhecimento. Faça uma pergunta!</h4>
-                </div>
+            <div className={styles.backgroundImage}>
+                <section className={styles.heroSection}>
+                    <div className={styles.sectionTitle}>
+                        <img src={logo} alt="Logo MakeAQuestion"/>
+                        <h4>A dúvida é o motor do conhecimento. Faça uma pergunta!</h4>
+                    </div>
+                
+                    <div className={styles.heroButtons}>
+                        <Link to="/sign-up  "><button>Entrar</button></Link>
+                        <p>▼</p>
+                    </div>
+                </section>
+            </div>
 
-                <div className={styles.heroButtons}>
-                    <button>Entrar</button>
-                    <p>▼</p>
-                </div>
-            </section>
-
-            <section className={styles.ratingSection}>
+            <section href="#rates" className={styles.ratingSection}>
                 <h5>O que a comunidade acha</h5>
 
                 <div className={styles.ratingContainer}>
@@ -72,7 +74,6 @@ function Introduction() {
 
                 <Link to="/contact"><button>Contate-nos</button></Link>
             </section>
-
         </main>
     )
 }   

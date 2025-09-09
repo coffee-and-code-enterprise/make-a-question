@@ -16,30 +16,39 @@ function Profile() {
   const location = useLocation();
 
   return (
-    <main className={styles.homeContainer}>
+    <main className={styles.profileContainer}>
       <section className={styles.userSection}>
+        <div className={styles.userContainer}>
+          <img src="/imgs/icon_user.jpg" alt="user icon" />
+          <h3>
+            Hello, Username<span>#12345</span>
+          </h3>
+        </div>
+        <a className={styles.downArrow} href="#questions">
+          ▾
+        </a>
       </section>
       <section className={styles.sectionSelection}>
         <a
-          onClick={() => navigate("/home")}
-          className={location.pathname === "/home" && styles.selected}
+          onClick={() => navigate("/profile")}
+          className={location.pathname === "/profile" && styles.selected}
         >
           Perguntas
         </a>
         <a
-          onClick={() => navigate("/home/foryou")}
-          className={location.pathname === "/home/foryou" && styles.selected}
+          onClick={() => navigate("/profile/answers")}
+          className={location.pathname === "/profile/answers" && styles.selected}
         >
           Respostas
         </a>
         <a
-          onClick={() => navigate("/home/recentcomments")}
-          className={location.pathname === "/home/recentcomments" && styles.selected}
+          onClick={() => navigate("/profile/favs")}
+          className={location.pathname === "/profile/favs" && styles.selected}
         >
           Favoritos
         </a>
       </section>
-      <section className={styles.questions}>
+      <section id="questions" className={styles.questions}>
         <div className={styles.buttons}>
           <Link to={"#"}>
             <button>Fazer uma pergunta</button>
@@ -48,44 +57,44 @@ function Profile() {
             <button>Responder uma pergunta aleatória</button>
           </Link>
         </div>
-				<div className={styles.comments}>
-					<Routes>
-						<Route
-							path="/"
-							element={
-								<div className={styles.quComponents}>
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-								</div>
-							}
-						/>
-						<Route
-							path="foryou"
-							element={
-								<div className={styles.quComponents}>
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-								</div>
-							}
-						/>
-						<Route
-							path="recentcomments"
-							element={
-								<div className={styles.quComponents}>
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-								</div>
-							}
-						/>
-					</Routes>
-					<p>1 2 3 ... 218</p>
-				</div>
+        <div className={styles.comments}>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className={styles.quComponents}>
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                </div>
+              }
+            />
+            <Route
+              path="answers"
+              element={
+                <div className={styles.quComponents}>
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                </div>
+              }
+            />
+            <Route
+              path="favs"
+              element={
+                <div className={styles.quComponents}>
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                </div>
+              }
+            />
+          </Routes>
+          <p>1 2 3 ... 218</p>
+        </div>
       </section>
     </main>
   );

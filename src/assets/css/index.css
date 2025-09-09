@@ -46,6 +46,15 @@ no código, logo altere com CUIDADO.
   padding: 0;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+
+  align-items: center;
+}
+
 h2 {
   color: var(--crayola-blue);
 }

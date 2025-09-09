@@ -50,6 +50,10 @@ h2 {
   color: var(--crayola-blue);
 }
 
+p {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
 /* Mudando as cores dependendo do que tema do usuário */
 @media (prefers-color-scheme: dark) {
   /* Mudando as cores padrão */

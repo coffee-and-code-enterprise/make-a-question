@@ -63,6 +63,13 @@ p {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
+input[type="text"] {
+  border: 1px solid var(--text);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
 /* Mudando as cores dependendo do que tema do usuário */
 @media (prefers-color-scheme: dark) {
   /* Mudando as cores padrão */

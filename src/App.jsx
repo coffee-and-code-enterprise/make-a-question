@@ -1,5 +1,6 @@
 // Componentes
 import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
 
 // Importando o estilo
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
@@ -39,9 +40,7 @@ function App() {
       </Routes>
           
       {/* Footer ficará aqui */}
-      <footer>
-          <p>&copy; {new Date().getFullYear()} Make A Question</p>
-      </footer>
+      <Footer/>
     </BrowserRouter>
   )
 }

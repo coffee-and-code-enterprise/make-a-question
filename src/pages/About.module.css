@@ -1,13 +1,14 @@
 .hero {
-    height: 90vh;
+    height: 89vh;
     width: 100%;
-    background-image: url("/about/planejamento.jpg");
+    background-image: url("/about/planning.jpg");
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .title {
@@ -24,34 +25,33 @@
     background-color: aliceblue;
     width: 100%;
     z-index: 1;
+    opacity: 0.5;
 }
 
 .mainContent {
     width: 100%;
-    height: 110vh;
-    background-color: #29447D;
+    height: 320vh;
+    background-color: var(--bg);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 100px 400px;
-    gap: 20px;
+    gap: 15px;
 }
 
 .mainTitle {
-    color: black;
+    color: var(--text);
     font-size: 30px;
 
 }
 
 .mainPa {
-    color: black;
     font-size: 22px;
 }
 
 .mainProject {
     font-size: 35px;
-    color: black;
-    padding: 90px 220px;
+    padding: 90px 250px;
 }
 
 .scrollDown {
@@ -72,6 +72,71 @@
 .scroll {
     text-decoration: none;
     color: black;
-}    
+}
+
+.planning {
+    width: 100%;
+    border: 7px solid black;
+}
+
+.projectPa {
+    font-size: 18px;
+}
+
+.mind {
+    width: 100%;
+    border: 7px solid black;
+}
+
+.mindPa {
+    font-size: 18px;
+}
+
+.start {
+    width: 100%;
+    border: 7px solid black;
+}
+
+.startPa {
+    font-size: 18px;
+}
+
+.wireframe {
+    width: 100%;
+    border: 7px solid black;
+}
+
+.wireframePa {
+    font-size: 18px;
+}
+
+.team {
+    height: 200vh;
+    background-color: var(--bg);
+}
+
+.teamTitle {
+    font-size: 30px;
+    padding: 50px
+}
+
+.gui {
+    border: 5px solid black;
+}
+
+.manu {
+    border: 5px solid black;
+}
+
+.gus {
+    border: 5px solid black;
+}
+.vini {
+    border: 5px solid black;
+}
+
+.section1 {
+    display: flex;
+}
 
 

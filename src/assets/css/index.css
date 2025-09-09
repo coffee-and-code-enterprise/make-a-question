@@ -10,6 +10,9 @@ no código, logo altere com CUIDADO.
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+  /* adicionando overflow-x */
+  overflow-x: hidden;
+
   /* Criando variáveis para todo o site */
   --text: #333;
   --bg: #fafafa;

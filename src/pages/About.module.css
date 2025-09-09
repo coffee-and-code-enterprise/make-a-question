@@ -1,0 +1,77 @@
+.hero {
+    height: 90vh;
+    width: 100%;
+    background-image: url("/about/planejamento.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.title {
+    font-size: 40px;
+    color: black;
+}
+
+.pa {
+    font-size: 20px;
+    color: black;
+}
+
+.overlay {
+    background-color: aliceblue;
+    width: 100%;
+    z-index: 1;
+}
+
+.mainContent {
+    width: 100%;
+    height: 110vh;
+    background-color: #29447D;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 400px;
+    gap: 20px;
+}
+
+.mainTitle {
+    color: black;
+    font-size: 30px;
+
+}
+
+.mainPa {
+    color: black;
+    font-size: 22px;
+}
+
+.mainProject {
+    font-size: 35px;
+    color: black;
+    padding: 90px 220px;
+}
+
+.scrollDown {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 20px;
+    animation: bounce 1.5s infinite;
+    position: absolute;
+    bottom: 0;
+    padding: 35px;
+    }
+
+    @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    }
+
+.scroll {
+    text-decoration: none;
+    color: black;
+}    
+
+

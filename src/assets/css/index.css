@@ -10,6 +10,9 @@ no código, logo altere com CUIDADO.
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+  /* adicionando overflow-x */
+  overflow-x: hidden;
+
   /* Criando variáveis para todo o site */
   --text: #333;
   --bg: #fafafa;
@@ -61,6 +64,13 @@ h2 {
 
 p {
   font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+input[type="text"] {
+  border: 1px solid var(--text);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width: 100%;
 }
 
 /* Mudando as cores dependendo do que tema do usuário */

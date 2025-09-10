@@ -25,6 +25,7 @@
   text-decoration: none;
   color: var(--text);
   font-weight: var(--thickness);
+  user-select: none;
 }
 
 .logo {
@@ -62,6 +63,7 @@
   align-items: center;
   gap: 10px;
   position: relative;
+  user-select: none;
 }
 
 .userName{

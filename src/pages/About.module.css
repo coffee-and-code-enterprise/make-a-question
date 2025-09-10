@@ -1,19 +1,25 @@
+.heroContainer {
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .hero {
     height: 89vh;
     width: 100%;
-    background-image: url("/about/planning.jpg");
+    background-image: url("/about/planejamento.jpg");
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
     position: relative;
-    flex-wrap: wrap;
 }
 
 .title {
     font-size: 40px;
     color: black;
+    display: flex;
+    justify-content: center;
 }
 
 .pa {
@@ -22,7 +28,6 @@
 }
 
 .overlay {
-    background-color: aliceblue;
     width: 100%;
     z-index: 1;
     opacity: 0.5;
@@ -30,11 +35,10 @@
 
 .mainContent {
     width: 100%;
-    height: 320vh;
+    height: 305vh;
     background-color: var(--bg);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     padding: 100px 400px;
     gap: 15px;
 }
@@ -51,7 +55,10 @@
 
 .mainProject {
     font-size: 35px;
-    padding: 90px 250px;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
 }
 
 .scrollDown {
@@ -111,32 +118,72 @@
 }
 
 .team {
-    height: 200vh;
+    height: 170vh;
     background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .teamTitle {
     font-size: 30px;
-    padding: 50px
+    padding: 50px;
 }
 
 .gui {
     border: 5px solid black;
+    width: 50%;
 }
 
 .manu {
     border: 5px solid black;
+    width: 50%;
 }
 
 .gus {
     border: 5px solid black;
+    width: 50%;
 }
 .vini {
     border: 5px solid black;
+    width: 50%;
 }
 
 .section1 {
     display: flex;
 }
+
+@media (max-width: 1024px) {
+    .mainContent {
+        padding: 5% 8%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+    .mainContent {
+        padding: 5% 5%;
+    }
+    .section1 {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .scrollDown {
+        font-size: 2rem;
+    }
+    .mainProject {
+        font-size: 1.5rem;
+    }
+    .teamTitle {
+        font-size: 1.4rem;
+    }
+}
+
+
 
 

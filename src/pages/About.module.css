@@ -35,7 +35,7 @@
 
 .mainContent {
     width: 100%;
-    height: 305vh;
+    height: 100%;
     background-color: var(--bg);
     display: flex;
     flex-direction: column;
@@ -162,6 +162,8 @@
 @media (max-width: 768px) {
     .hero {
         padding: 2rem 1rem;
+        height: 85vh;
+        
     }
     .mainContent {
         padding: 5% 5%;
@@ -170,6 +172,10 @@
         flex-direction: column;
         align-items: center;
     }
+    .title {
+        font-size: 25px;
+    }
+
 }
 
 @media (max-width: 480px) {

@@ -78,8 +78,8 @@
   user-select: none;
   background-color: var(--text);
   color: var(--bg);
-  width: 83%;
-  padding: 1rem 0.5rem;
+  width: 55%;
+  padding: 0.5rem 0.5rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -87,5 +87,5 @@
 }
 
 .buttons button:hover {
-  width: 85%;
+  width: 60%;
 }

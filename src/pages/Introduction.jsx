@@ -20,14 +20,16 @@ function Introduction() {
                     </div>
                 
                     <div className={styles.heroButtons}>
-                        <Link to="/sign-up  "><button>Entrar</button></Link>
-                        <p>▼</p>
+                        <Link to="/sign-up"><button className={styles.linkButton}>Entrar</button></Link>
+                        <a href = "#rates" className={styles.arrowButton}>▼</a>
                     </div>
                 </section>
             </div>
 
-            <section href="#rates" className={styles.ratingSection}>
-                <h5>O que a comunidade acha</h5>
+            <section id="rates" className={styles.ratingSection}>
+                <div className={styles.sectionTitle}>
+                    <h2>O que a comunidade acha?</h2>
+                </div>
 
                 <div className={styles.ratingContainer}>
                     <Rating/>
@@ -40,7 +42,7 @@ function Introduction() {
 
             <section className={styles.membersSection}>
                 <div className={styles.sectionTitle}>
-                    <h5>Integrantes da Equipe</h5>
+                    <h2>Integrantes da Equipe</h2>
                     <p>Conheça mais sobre o pessoal</p>
                 </div>
 
@@ -58,21 +60,21 @@ function Introduction() {
 
                 <div className={styles.aboutSection}>
                     <div className={styles.sectionTitle}>
-                        <h5>Por onde começamos?</h5>
+                        <h2>Por onde começamos?</h2>
                         <p>Se quiser saber mais sobre como começamos, siga o botão:</p>
                     </div>
 
-                    <Link to="/about"><button>Sobre</button></Link>
+                    <Link to="/about"><button className={styles.linkButton}>Sobre</button></Link>
                 </div>
             </section>
 
             <section className={styles.contactSection}>
                 <div className={styles.sectionTitle}>
-                    <h5>Contate-nos</h5>
+                    <h2>Contate-nos</h2>
                     <p>Envie uma menssagem diretamente para nosso pessoal</p>
                 </div>
-
-                <Link to="/contact"><button>Contate-nos</button></Link>
+                
+                <Link to="/contact"><button className={styles.linkButton}>Contate-nos</button></Link>
             </section>
         </main>
     )

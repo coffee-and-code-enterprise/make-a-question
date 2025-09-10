@@ -1,3 +1,6 @@
+
+/*Padronizações*/
+/*Titulos*/
 .sectionTitle{
     display: flex;
     gap: 25px;
@@ -10,6 +13,25 @@
     font-weight: 400;
 }
 
+/*Botões*/
+.linkButton {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    background-color: inherit;
+    border: 1px solid var(--text);
+    transition: padding 0.5s ease-in-out, opacity 0.5 s ease-in-out;
+}
+
+.linkButton:hover{
+    padding: 10px 27px;
+    opacity: 0.95;
+}
+
+/*Seções*/
+/*Seção Hero*/
 .heroSection{
     height: 100vh;
     width: 100%;
@@ -30,24 +52,38 @@
     align-items: center;
 }
 
-.heroSection .heroButtons button{
+.arrowButton{
+    position: absolute;
     cursor: pointer;
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    background-color: inherit;
-    border: 1px solid var(--text);
-    transition: padding 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out
+    bottom: 50px;
+    text-decoration: none;
+    color: inherit;
+    animation: bounce 2s ease-in-out infinite;
 }
 
-.heroSection .heroButtons button:hover{
-    padding: 10px 27px;
-    opacity: 0.95;
+/*Seção Rates*/
+.ratingSection{
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 30px;
+        align-items: center;
 }
 
-.heroSection .heroButtons p{
-    cursor: pointer;
+.ratingContainer{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 20px;
 }
 
+/*Animações*/
+@keyframes bounce{
+    0%, 100% {
+        transform: translateY(0px);
+    }
 
+    50%{
+        transform: translateY(-10px);
+    }
+
+}

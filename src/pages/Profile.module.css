@@ -136,8 +136,8 @@
 .buttons button {
   font-size: 1rem;
   user-select: none;
-  background-color: var(--text);
-  color: var(--bg);
+  background-color: var(--crayola-blue);
+  color: var(--text);
   width: 55%;
   padding: 0.5rem 0.5rem;
   border: none;
@@ -148,4 +148,32 @@
 
 .buttons button:hover {
   width: 60%;
+}
+
+/* Responsivity */
+
+@media (max-width: 768px) {
+  .questions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .exComponent {
+    width: 350px;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  .buttons button:hover {
+    width: 95%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .buttons button {
+    background-color: var(--picton-blue);
+  }
 }

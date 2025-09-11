@@ -36,7 +36,7 @@ function Introduction() {
                     <Rating />
                     <Rating />
 
-                    <p>ver mais</p>
+                    <a href="">Ver mais</a>
                 </div>
             </section>
 
@@ -47,24 +47,33 @@ function Introduction() {
                 </div>
 
                 <div className={styles.membersImage}>
-                    <img src={icon} alt="" />
-                    <img src={icon} alt="" />
-                    <img src={icon} alt="" />
-                    <img src={icon} alt="" />
+                    <div className={`${styles.imageIcon} ${styles.vini}`}>
+                        <p className={styles.nameIcon}>Vinícius Duarte</p>
+                        <p className={styles.nameIcon}>Fullstack</p>
+                    </div>
+                    <div className={`${styles.imageIcon} ${styles.gui}`}>
+                        <p className={styles.nameIcon}>Guilherme Bittencourt</p>
+                        <p className={styles.nameIcon}>Fullstack</p>
+                    </div>
+                    <div className={`${styles.imageIcon} ${styles.caze}`}>
+                        <p className={styles.nameIcon}>Emanuel Rezende</p>
+                        <p className={styles.nameIcon}>Fullstack</p>
+                    </div>
+                    <div className={`${styles.imageIcon} ${styles.em}`}>
+                        <p className={styles.nameIcon}>Gustavo Henrrique</p>
+                        <p className={styles.nameIcon}>Fullstack</p>
+                    </div>
                 </div>
             </section>
 
             <section className={styles.aboutSection}>
                 
-                <img src={icon} alt="" />
+                <img className={styles.imageAbout} src={icon} alt="" />
 
-                <div className={styles.aboutSection}>
-                    <div className={styles.sectionTitle}>
+                <div className={`${styles.sectionTitle} ${styles.tittleAbout}`}>
                         <h2>Por onde começamos?</h2>
-                        <p>Se quiser saber mais sobre como começamos, siga o botão:</p>
-                    </div>
-
-                    <Link to="/about"><button className={styles.linkButton}>Sobre</button></Link>
+                        <p className={styles.aboutP}>Se quiser saber mais sobre como começamos, siga o botão:</p>
+                        <Link to="/about"><button className={`${styles.linkButton} ${styles.aboutButton}`}>Sobre</button></Link>
                 </div>
             </section>
 

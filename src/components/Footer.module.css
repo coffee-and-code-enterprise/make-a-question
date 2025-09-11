@@ -1,0 +1,77 @@
+.footerContainer {
+  background-color: #f0f0f0;
+  padding: 30px 40px;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+/* Flex neles (na coluna) */
+.footerContent {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.logoLink {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #333;
+}
+
+.sectionTitle {
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+}
+
+.linkList,
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkList li,
+.contactList li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Icones */
+.iconsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+/* copyright */
+.footerBottom {
+  background-color: #b0b0b0;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 0.85rem;
+  color: #222;
+  font-weight: 500;
+}
+
+.logo {
+  display: flex;
+  width: 270px;
+}

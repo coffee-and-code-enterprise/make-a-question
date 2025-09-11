@@ -38,7 +38,7 @@ function Footer() {
 
           {/*Sobre o Projeto*/}
           <div className={styles.projectSection}>
-            <h4 className={styles.sectionTitle}>Sobre o Projeto</h4>
+            <h4 className={styles.sectionTitle}>Sobre o Projeto</h4> 
             <ul className={styles.linkList}>
               <li><a href="https://github.com/coffee-and-code-enterprise" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>GitHub</a></li>
             </ul>

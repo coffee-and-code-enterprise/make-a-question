@@ -39,7 +39,7 @@ function App() {
         <Route path="/settings" element={<Settings />}/>
       </Routes>
           
-      {/* Footer ficará aqui */}
+      {/* Footer se encontra aqui */}
       <Footer/>
     </BrowserRouter>
   )

@@ -38,7 +38,7 @@ function About() {
 				<br /></div>
 				
 				<div><p>"Mister EAM"</p>
-				<p>EMANUEL MAIA</p>
+				<p>EMANUEL RESENDE</p>
 				<img className={styles.manu} src="/about/manu.png" alt="" />
 				<p>° 21 anos</p>
 				<p>° emanuelaugustosantos13@gmail.com</p></div></div>

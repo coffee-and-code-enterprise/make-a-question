@@ -10,11 +10,11 @@ function UserPopUp({ visible, setter }) {
     <div className={styles.popUpContainer} style={{ visibility: visible }}>
       <div className={styles.top}>
         <h4>Hello, Username!</h4>
-        <button onClick={() => setter('hidden')}>X</button>
+        <button id={styles.close} onClick={() => setter('hidden')}>X</button>
       </div>
-      <Link to="/profile"><button>Perfil</button></Link>
-      <Link to="/settings"><button>Configurações</button></Link>
-      <Link to="#"><button>Sair</button></Link>
+      <Link to="/profile"><button className={styles.translate}>Perfil</button></Link>
+      <Link to="/settings"><button className={styles.translate}>Configurações</button></Link>
+      <Link to="#"><button className={styles.translate}>Sair</button></Link>
     </div>
   );
 }

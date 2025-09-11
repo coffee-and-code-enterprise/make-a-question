@@ -5,7 +5,7 @@
 
 .hero {
     height: 89vh;
-    width: 100%;
+    width: auto;
     background-image: url("/about/planejamento.jpg");
     display: flex;
     flex-direction: column;
@@ -118,16 +118,33 @@
 }
 
 .team {
-    height: 170vh;
+    height: auto;
     background-color: var(--bg);
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 .teamTitle {
     font-size: 30px;
-    padding: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.firstProfiles {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.secondProfiles {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .gui {
@@ -142,11 +159,11 @@
 
 .gus {
     border: 5px solid black;
-    width: 50%;
+    width: 55%;
 }
 .vini {
     border: 5px solid black;
-    width: 50%;
+    width: 55%;
 }
 
 .section1 {
@@ -176,6 +193,14 @@
         font-size: 25px;
     }
 
+    .firstProfiles {
+        padding: 0 2rem;
+    }
+
+    .secondProfiles {
+        padding: 0 2rem;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -187,6 +212,10 @@
     }
     .teamTitle {
         font-size: 1.4rem;
+    }
+
+    .hero {
+        background-size: 76rem;
     }
 }
 

@@ -1,0 +1,77 @@
+.hero {
+    background-color: var(--bg);
+}
+
+.heroContent {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+    padding: 3.5rem;
+    gap: 10px;
+}
+
+.heroTitle {
+    font-size: 2.5rem;
+    color: var(--text);
+}
+
+.heroPa {
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.formSection {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.formControl {
+    width: 100%;
+
+}
+
+.hero label {
+    font-size: 20px;
+}
+
+.hero input, .hero  select {
+    width: 19rem;
+    height: 5vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 0 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--bg);
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  width: 19rem;
+}
+
+.btn:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.other {
+    height: 8vh !important;
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2rem;
+    }
+}
+
+.hero select:hover {
+    appearance: none;
+}

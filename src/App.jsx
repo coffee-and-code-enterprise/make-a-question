@@ -27,7 +27,7 @@ function App() {
       {/* A página do site vai aparecer entre o header e o footer, de acordo com o link na url */}
       <Routes>
         <Route path="/" element={<Introduction />} />
-        <Route path="/answers" element={<Answers />} />
+        <Route path="/answers/*" element={<Answers />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/profile/*" element={<Profile />} />
         <Route path="/report-bugs" element={<ReportBugs />} />

@@ -1,7 +1,7 @@
 function SignUp() {
   return (
     <main>
-      <h1>Cadastrar</h1>
+      <h2>Cadastrar</h2>
     </main>
   );
 }

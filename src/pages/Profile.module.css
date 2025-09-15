@@ -9,8 +9,8 @@
   height: 40vh;
 
   background-color: #151515;
-  background-image: url('/imgs/question.svg');
-  background-size: 70px;
+  background-image: var(--question);
+  background-size: 100px;
   animation: movingQuestion 7s linear infinite;
 
   .downArrow {
@@ -29,7 +29,7 @@
     background-position: 0 0;
   }
   100% {
-    background-position: 70px -70px;
+    background-position: 100px -100px;
   }
 }
 

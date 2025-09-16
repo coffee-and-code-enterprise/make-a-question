@@ -14,7 +14,7 @@ function UserPopUp({ visible, setter }) {
       </div>
       <Link to="/profile"><button className={styles.translate}>Perfil</button></Link>
       <Link to="/settings"><button className={styles.translate}>Configurações</button></Link>
-      <Link to="/signup"><button className={styles.translate}>Sair</button></Link>
+      <Link to="/login"><button className={styles.translate}>Sair</button></Link>
     </div>
   );
 }

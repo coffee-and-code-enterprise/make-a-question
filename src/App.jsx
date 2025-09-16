@@ -1,8 +1,9 @@
 // Componentes
 import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
 
 // Importando o estilo
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 
 // Páginas
 import Home from './pages/Home.jsx'
@@ -11,24 +12,36 @@ import Contact from './pages/Contact.jsx'
 import Introduction from './pages/Introduction.jsx'
 import Settings from './pages/Settings.jsx'
 import Answers from './pages/Answers.jsx'
-import SignUp from './pages/SignUp.jsx'
+import Login from './pages/Login.jsx'
 import Profile from './pages/Profile.jsx'
 import ReportBugs from './pages/ReportBugs.jsx'
 
 
 function App() {
-
   return (
     <BrowserRouter>
-      {/* Header ficará aqui, no lugar desta tag <nav> */}
-      <Header></Header>
+      <Layout />
+    </BrowserRouter>
+  )
+}
 
-      {/* Rotas*/}
-      {/* A página do site vai aparecer entre o header e o footer, de acordo com o link na url */}
+function Layout() {
+  const location = useLocation();
+  const hideLayout = location.pathname === '/login';  // Se a tela for a de cadastro, ele esconderá o Header e o Footer
+
+  return (
+    <>
+      {!hideLayout && <Header />}
+
       <Routes>
         <Route path="/" element={<Introduction />} />
+<<<<<<< HEAD
         <Route path="/answers/*" element={<Answers />} />
         <Route path="/signup" element={<SignUp />} />
+=======
+        <Route path="/answers/*" element={<Answers />} />
+        <Route path="/login" element={<Login />} />
+>>>>>>> f6c2255a173f91c519d4e163c61881803a84e63a
         <Route path="/profile/*" element={<Profile />} />
         <Route path="/report-bugs" element={<ReportBugs />} />
         <Route path="/home/*" element={<Home />} />
@@ -38,12 +51,9 @@ function App() {
         <Route path="/settings" element={<Settings />}/>
       </Routes>
           
-      {/* Footer ficará aqui */}
-      <footer>
-          <p>&copy; {new Date().getFullYear()} Make A Question</p>
-      </footer>
-    </BrowserRouter>
-  )
+      {!hideLayout && <Footer />}
+    </>
+  );
 }
 
 export default App

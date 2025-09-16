@@ -16,6 +16,7 @@ no código, logo altere com CUIDADO.
   /* Criando variáveis para todo o site */
   --text: #333;
   --bg: #fafafa;
+  --question: url('/imgs/question.svg');
 
   /* Cores que estão no nosso Miro */
   --marian-blue: #29447D;
@@ -66,7 +67,7 @@ p {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
-input[type="text"] {
+input {
   border: 1px solid var(--text);
   border-radius: 5px;
   padding: 0.5rem 1rem;
@@ -79,6 +80,7 @@ input[type="text"] {
   :root {
     --text: #ffffff;
     --bg: #1a1a1a;
+    --question: url('/imgs/question-white.svg');
   }
 
   /* Mudando cores específicas */

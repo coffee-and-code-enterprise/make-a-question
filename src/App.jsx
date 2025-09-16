@@ -35,13 +35,8 @@ function Layout() {
 
       <Routes>
         <Route path="/" element={<Introduction />} />
-<<<<<<< HEAD
         <Route path="/answers/*" element={<Answers />} />
         <Route path="/signup" element={<SignUp />} />
-=======
-        <Route path="/answers/*" element={<Answers />} />
-        <Route path="/login" element={<Login />} />
->>>>>>> f6c2255a173f91c519d4e163c61881803a84e63a
         <Route path="/profile/*" element={<Profile />} />
         <Route path="/report-bugs" element={<ReportBugs />} />
         <Route path="/home/*" element={<Home />} />

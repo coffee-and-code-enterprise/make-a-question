@@ -22,7 +22,7 @@ function App() {
   return (
     <BrowserRouter>
       {/* Header ficará aqui, no lugar desta tag <nav> */}
-      <Header></Header>
+      <Header/>
 
       {/* Rotas*/}
       {/* A página do site vai aparecer entre o header e o footer, de acordo com o link na url */}

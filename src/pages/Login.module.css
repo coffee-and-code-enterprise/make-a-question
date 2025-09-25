@@ -15,10 +15,11 @@ main#loginContainer::before {
   /* Apply background and filter here */
   background-image: var(--question);
   background-size: 70px;
-  animation: movingQuestion 15s linear infinite;
+  animation: movingQuestion 7s linear infinite;
 
   opacity: 0.1; /* Example filter: opacity */
 }
+
 
 
 @keyframes movingQuestion {
@@ -26,7 +27,7 @@ main#loginContainer::before {
     background-position: 0 0;
   }
   100% {
-    background-position: 100px -100px;
+    background-position: 70px -70px;
   }
 }
 

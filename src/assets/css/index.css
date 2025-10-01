@@ -10,9 +10,13 @@ no código, logo altere com CUIDADO.
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+  /* adicionando overflow-x */
+  overflow-x: hidden;
+
   /* Criando variáveis para todo o site */
   --text: #333;
   --bg: #fafafa;
+  --question: url('/imgs/question.svg');
 
   /* Cores que estão no nosso Miro */
   --marian-blue: #29447D;
@@ -46,8 +50,29 @@ no código, logo altere com CUIDADO.
   padding: 0;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: fit-content;
+
+  align-items: center;
+}
+
 h2 {
   color: var(--crayola-blue);
+  font-size: 2.2rem;
+}
+
+p {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+input {
+  border: 1px solid var(--text);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width: 100%;
 }
 
 /* Mudando as cores dependendo do que tema do usuário */
@@ -56,6 +81,7 @@ h2 {
   :root {
     --text: #ffffff;
     --bg: #1a1a1a;
+    --question: url('/imgs/question-white.svg');
   }
 
   /* Mudando cores específicas */

@@ -1,27 +1,99 @@
-/*
-Seguinte, diferente do que você já está acostumado, a gente vai usar .module no CSS.
-Isso vai ter o intuito de prevenir aquele problema que tivemos no último projeto, onde
-o CSS de uma página poderia afetar o da outra. Para usar ele é bem simples:
+// Dependencies
+import {
+  Routes,
+  Route,
+  Link,
+  useNavigate,
+  useLocation,
+} from "react-router-dom";
 
-Ao invés de: <div className="container" />
-Iremos usar: <div className={styles.container} />
-
-O arquivo CSS não vai mudar, pode programar igual você já utilizava. A única coisa que vou
-pedir para começar a fazer é nomear as classes e IDs como pascalCase, o que é pascalCase?
-Basicamente, ao invés de você renomear uma classe como ".home-container", você vai nomear como
-".homeContainer". Só isso. Bom código!
-*/
-
+// Stylesheet
 import styles from "./Home.module.css";
 
 // Criando o componente da Home:
 function Home() {
-	return (
-		<main>
-			<h2>Home</h2>
-		</main>
-	)
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  return (
+    <main className={styles.homeContainer}>
+      <section className={styles.search}>
+        <h2>
+          <img src="/logos/logo_makeaquestion_white.png" alt="logo" />
+        </h2>
+        <input type="text" placeholder="Faça uma pergunta..." />
+      </section>
+      <section className={styles.filter}>
+        <a
+          onClick={() => navigate("/home")}
+          className={location.pathname === "/home" && styles.selected}
+        >
+          Recomendados
+        </a>
+        <a
+          onClick={() => navigate("/home/foryou")}
+          className={location.pathname === "/home/foryou" && styles.selected}
+        >
+          Para Você
+        </a>
+        <a
+          onClick={() => navigate("/home/recentcomments")}
+          className={location.pathname === "/home/recentcomments" && styles.selected}
+        >
+          Recentes
+        </a>
+      </section>
+      <section className={styles.questions}>
+        <div className={styles.buttons}>
+          <Link to={"#"}>
+            <button>Fazer uma pergunta</button>
+          </Link>
+          <Link to={"#"}>
+            <button>Responder uma pergunta aleatória</button>
+          </Link>
+        </div>
+				<div className={styles.comments}>
+					<Routes>
+						<Route
+							path="/"
+							element={
+								<div className={styles.quComponents}>
+									<div className={styles.exComponent} />
+									<div className={styles.exComponent} />
+									<div className={styles.exComponent} />
+									<div className={styles.exComponent} />
+								</div>
+							}
+						/>
+						<Route
+							path="foryou"
+							element={
+								<div className={styles.quComponents}>
+									<div className={styles.exComponent} />
+									<div className={styles.exComponent} />
+									<div className={styles.exComponent} />
+									<div className={styles.exComponent} />
+								</div>
+							}
+						/>
+						<Route
+							path="recentcomments"
+							element={
+								<div className={styles.quComponents}>
+									<div className={styles.exComponent} />
+									<div className={styles.exComponent} />
+									<div className={styles.exComponent} />
+									<div className={styles.exComponent} />
+								</div>
+							}
+						/>
+					</Routes>
+					<p>1 2 3 ... 218</p>
+				</div>
+      </section>
+    </main>
+  );
 }
 
 // Exportando esse componente como padrão deste arquivo:
-export default Home
+export default Home;

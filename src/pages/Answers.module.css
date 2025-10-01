@@ -1,0 +1,107 @@
+.heroContent {
+    display: flex;
+    gap: 20px;
+    padding: 3rem 0;
+        a {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #666;
+            border-bottom: 1px solid transparent;
+            user-select: none;
+            cursor: pointer;
+            transition: border-bottom 0.3s;
+
+        }
+
+        a:hover {
+            border-bottom: 1px solid var(--text);
+        }
+
+        a.selected {
+            border-bottom: 1px solid var(--text);
+            color: var(--text);
+        }
+}
+
+.questions {
+    display: grid;
+    grid: 1fr / 1fr 1fr 1fr;
+    max-width: 1200px;
+    padding: 2rem;
+    a {
+        display: contents;
+    }
+}
+
+.quComponents {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.exComponent {
+    width: 500px;
+    height: 100px;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+}
+
+.questions .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttons button {
+    font-size: 1rem;
+    user-select: none;
+    background-color: var(--crayola-blue);
+    color: var(--text);
+    width: 55%;
+    padding: 0.5rem 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: width 0.3s;
+}
+
+.buttons button:hover {
+    width: 60%;
+}
+
+@media (max-width: 768px) {
+  .questions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .exComponent {
+    width: 350px;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  .buttons button:hover {
+    width: 95%;  
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .buttons button {
+    background-color: var(--picton-blue);
+  }
+}
+
+
+

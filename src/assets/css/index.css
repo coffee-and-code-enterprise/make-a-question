@@ -85,14 +85,14 @@ input {
 /* Mudando as cores dependendo do que tema do usuário */
 @media (prefers-color-scheme: dark) {
   /* Mudando as cores padrão */
-  :root {
-    /* --text: #ffffff;
+  /*:root {
+    --text: #ffffff;
     --bg: #1a1a1a;
     --question: url('/imgs/question-white.svg');
     --full-logo: url('/logos/logo_makeaquestion_white.png');
-    --logo: url('/logos/logo_makeaquestion_white_center.png'); */
+    --logo: url('/logos/logo_makeaquestion_white_center.png');
     
-  }
+  }*/
 
   /* Mudando cores específicas */
   h2 {

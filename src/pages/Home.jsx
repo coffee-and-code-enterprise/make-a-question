@@ -6,6 +6,8 @@ import {
   useNavigate,
   useLocation,
 } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 // Stylesheet
 import styles from "./Home.module.css";
@@ -21,7 +23,10 @@ function Home() {
         <h2>
           <img className="full-logo" alt="logo" />
         </h2>
-        <input type="text" placeholder="Faça uma pergunta..." />
+        <div className={styles.searchBar}>
+          <FontAwesomeIcon icon={faSearch} className={styles.searchIcon}></FontAwesomeIcon>
+          <input type="text" placeholder="Faça uma pergunta..." />
+        </div>
       </section>
       <section className={styles.filter}>
         <a
@@ -38,7 +43,9 @@ function Home() {
         </a>
         <a
           onClick={() => navigate("/home/recentcomments")}
-          className={location.pathname === "/home/recentcomments" && styles.selected}
+          className={
+            location.pathname === "/home/recentcomments" && styles.selected
+          }
         >
           Recentes
         </a>
@@ -52,44 +59,44 @@ function Home() {
             <button>Responder uma pergunta aleatória</button>
           </Link>
         </div>
-				<div className={styles.comments}>
-					<Routes>
-						<Route
-							path="/"
-							element={
-								<div className={styles.quComponents}>
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-								</div>
-							}
-						/>
-						<Route
-							path="foryou"
-							element={
-								<div className={styles.quComponents}>
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-								</div>
-							}
-						/>
-						<Route
-							path="recentcomments"
-							element={
-								<div className={styles.quComponents}>
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-								</div>
-							}
-						/>
-					</Routes>
-					<p>1 2 3 ... 218</p>
-				</div>
+        <div className={styles.comments}>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className={styles.quComponents}>
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                </div>
+              }
+            />
+            <Route
+              path="foryou"
+              element={
+                <div className={styles.quComponents}>
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                </div>
+              }
+            />
+            <Route
+              path="recentcomments"
+              element={
+                <div className={styles.quComponents}>
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                  <div className={styles.exComponent} />
+                </div>
+              }
+            />
+          </Routes>
+          <p>1 2 3 ... 218</p>
+        </div>
       </section>
     </main>
   );

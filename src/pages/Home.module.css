@@ -5,12 +5,42 @@
   gap: 20px;
   min-width: 40%;
   padding: 2rem;
+
   h2 {
     user-select: none;
   }
+
   img {
     height: 2rem;
   }
+
+  input {
+    position: absolute;
+
+    background-color: var(--bg);
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0px;
+    padding-left: 40px;
+    color: var(--text);
+    height: 35px;
+  }
+}
+
+.searchBar {
+  position: relative;
+  width: 100%;
+  height: 35px;
+}
+
+.searchIcon {
+  position: absolute;
+  z-index: 1;
+  width: 1.25rem;
+  height: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
 }
 
 .filter {
@@ -38,7 +68,7 @@
 
 .questions {
   display: grid;
-  grid: 1fr / 1fr 1fr 1fr;
+  grid: 1fr / 1fr 3fr 1fr;
   max-width: 1200px;
   padding: 2rem;
   a {
@@ -77,8 +107,8 @@
   font-size: 1rem;
   user-select: none;
   background-color: var(--crayola-blue);
-  color: var(--text);
-  width: 55%;
+  color: #fff;
+  width: 90%;
   padding: 0.5rem 0.5rem;
   border: none;
   border-radius: 5px;
@@ -87,12 +117,11 @@
 }
 
 .buttons button:hover {
-  width: 60%;
+  width: 100%;
 }
 
 
 /* Responsivity */
-
 @media (max-width: 768px) {
   .questions {
     display: flex;
@@ -113,8 +142,10 @@
   }
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   .buttons button {
     background-color: var(--picton-blue);
   }
 }
+*/

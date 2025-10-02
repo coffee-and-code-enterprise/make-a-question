@@ -4,6 +4,7 @@
   width: 200px;
   height: fit-content;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   padding: 1rem;
 
@@ -17,10 +18,19 @@
   z-index: 2;
 }
 
-
 .popUpContainer>a {
-  display: contents;
+  background-color: var(--bg);
+  border-radius: 5px;
+  text-decoration: none;
   user-select: none;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.2s;
+  padding: 5px 0px;
+}
+
+.popUpContainer>a:hover {
+  background-color: var(--picton-blue);
 }
 
 .popUpContainer button {
@@ -29,8 +39,8 @@
   cursor: pointer;
   font-size: 1rem;
   user-select: none;
-  background-color: var(--text);
-  color: var(--bg);
+  background-color: var(--picton-blue);
+  color: #000;
   padding: 0.5rem 0.5rem;
   border: none;
   border-radius: 5px;
@@ -39,6 +49,10 @@
 
 button#close {
   padding: 0;
+}
+
+.userImage {
+  border-radius: 50%;
 }
 
 .popUpContainer button.translate:hover {
@@ -57,4 +71,9 @@ button#close {
   height: 1.25rem;
   margin-left: auto;
   user-select: none;
+}
+
+.top span {
+  font-weight: 600;
+  color: var(--crayola-blue)
 }

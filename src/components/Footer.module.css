@@ -15,6 +15,16 @@
 	flex-wrap: wrap; /* permite quebrar em telas menores */
 }
 
+.footerContent *{
+	max-width: 20vw;
+}
+
+.footerContent * li {
+	white-space: normal;   /* Permite quebra de linha automática */
+  word-wrap: break-word; /* Quebra palavras longas */
+  overflow-wrap: anywhere;
+}
+
 .logoLink {
 	font-size: 1.5rem;
 	font-weight: 700;
@@ -68,6 +78,11 @@
 	align-items: center;
 }
 
+.iconsSection a *{
+		width: 2rem;
+		height: 2rem;
+	}
+
 .footerBottom {
 	background-color: var(--marian-blue);
 	text-align: center;
@@ -89,6 +104,10 @@
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
+	}
+
+	.footerContent * {
+		max-width: 100vw;
 	}
 
 	.linkList {
@@ -135,7 +154,7 @@
 		padding: 10px 0;
 	}
 }
-
+/*
 @media (prefers-color-scheme: dark) {
   .footerContainer {
     background-color: var(--bg);
@@ -157,3 +176,4 @@
 		color: var(--platinum);
 	}
 }
+*/

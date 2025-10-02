@@ -1,20 +1,42 @@
 //Dependencies
-import { Link } from 'react-router-dom';
+import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // Stylesheet
-import styles from './UserPopUp.module.css';
+import styles from "./UserPopUp.module.css";
+
+// Images
+import icon from "/imgs/icon_user.jpg";
 
 function UserPopUp({ visible, setter }) {
+  const popRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickFora(event) {
+      // Se o ref existir e o clique não estiver dentro dele, fecha
+      if (popRef.current && !popRef.current.contains(event.target)) {
+        setter("hidden");
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickFora);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickFora);
+    };
+  }, []);
 
   return (
-    <div className={styles.popUpContainer} style={{ visibility: visible }}>
+    <div ref={popRef} className={styles.popUpContainer} style={{ visibility: visible }}>
       <div className={styles.top}>
-        <h4>Hello, Username!</h4>
-        <button id={styles.close} onClick={() => setter('hidden')}>X</button>
+        <img className={styles.userImage} src={icon} alt="user icon" />
+        <p>
+          <span>Hello</span>, Username!
+        </p>
       </div>
-      <Link to="/profile"><button className={styles.translate}>Perfil</button></Link>
-      <Link to="/settings"><button className={styles.translate}>Configurações</button></Link>
-      <Link to="/login"><button className={styles.translate}>Sair</button></Link>
+      <Link to="/profile">Perfil</Link>
+      <Link to="/settings">Configurações</Link>
+      <Link to="/login">Sair</Link>
     </div>
   );
 }

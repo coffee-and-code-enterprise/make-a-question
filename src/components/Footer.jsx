@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 
-// Logo
-import logo_white from "/logos/logo_makeaquestion_white.png";
+
 
 function Footer() {
   return (
@@ -13,7 +12,7 @@ function Footer() {
           {/*Logo*/}
           <div className={styles.logoSection}>
             <Link to="/home">
-              <img src={logo_white} alt="Logo MakeAQuestion" className={styles.logo} />
+              <img alt="Logo MakeAQuestion" className={styles.logo} />
             </Link>
           </div>
 
@@ -21,9 +20,12 @@ function Footer() {
           <div className={styles.pagesSection}>
             <h4 className={styles.sectionTitle}>Páginas</h4>
             <ul className={styles.linkList}>
+              <li><Link to="/" className={styles.footerLink}>introduction</Link></li>
               <li><Link to="/home" className={styles.footerLink}>Home</Link></li>
               <li><Link to="/about" className={styles.footerLink}>Sobre</Link></li>
               <li><Link to="/contact" className={styles.footerLink}>Contato</Link></li>
+              <li><Link to="/settings" className={styles.footerLink}>Settings</Link></li>
+              <li><Link to="/report-bugs" className={styles.footerLink}>Report Bugs</Link></li>
             </ul>
           </div>
 

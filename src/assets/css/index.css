@@ -13,10 +13,7 @@ no código, logo altere com CUIDADO.
   /* adicionando overflow-x */
   overflow-x: hidden;
 
-  /* Criando variáveis para todo o site */
-  --text: #333;
-  --bg: #fafafa;
-  --question: url('/imgs/question.svg');
+  min-width: 100vw;
 
   /* Cores que estão no nosso Miro */
   --marian-blue: #29447D;
@@ -25,6 +22,12 @@ no código, logo altere com CUIDADO.
   --platinum: #E7E4E1;
   --isabelline: #F3F2EE;
 
+  /* Criando variáveis para todo o site */
+  --text: #333;
+  --bg: #fafafa;
+  --question: url('/imgs/question.svg');
+  --full-logo: url('/logos/logo_makeaquestion_black.png');
+  --logo: url('/logos/logo_makeaquestion_black_center.png');
 
   /* Configurando as fontes */
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -75,6 +78,10 @@ input {
   width: 100%;
 }
 
+.full-logo {
+  content: var(--full-logo)
+}
+
 /* Mudando as cores dependendo do que tema do usuário */
 @media (prefers-color-scheme: dark) {
   /* Mudando as cores padrão */
@@ -82,6 +89,8 @@ input {
     --text: #ffffff;
     --bg: #1a1a1a;
     --question: url('/imgs/question-white.svg');
+    --full-logo: url('/logos/logo_makeaquestion_white.png');
+    --logo: url('/logos/logo_makeaquestion_white_center.png');
   }
 
   /* Mudando cores específicas */

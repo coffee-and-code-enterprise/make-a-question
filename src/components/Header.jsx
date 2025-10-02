@@ -8,8 +8,7 @@ import UserPopUp from "./UserPopUp";
 // Stylesheet
 import styles from "./Header.module.css";
 
-// Logos
-import logo_white from "/logos/logo_makeaquestion_white.png";
+// Images
 import icon from "/imgs/icon_user.jpg";
 
 function Header() {
@@ -27,7 +26,7 @@ function Header() {
           <ul className={styles.headerContent}>
             <li className={`${styles.headerIcon} ${styles.headerLink}`}>
               <Link to="/home">
-                <img className={styles.logo} src={logo_white} alt="logo" />
+                <img className={styles.logo} alt="logo" />
               </Link>
             </li>
             <li className={styles.headerLink}>

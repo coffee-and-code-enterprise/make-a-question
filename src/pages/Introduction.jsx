@@ -6,7 +6,6 @@ import Rating from '../components/Rating.jsx';
 
 //Images
 import icon from '/imgs/icon_user.jpg'
-import logo from '/logos/logo_makeaquestion_white.png'
 
 // Criando o componente da Introdução:
 function Introduction() {
@@ -15,7 +14,7 @@ function Introduction() {
             <div className={styles.backgroundImage}>
                 <section className={styles.heroSection}>
                     <div className={styles.sectionTitle}>
-                        <img src={logo} alt="Logo MakeAQuestion"/>
+                        <img className="full-logo" alt="Logo MakeAQuestion"/>
                         <h4>A dúvida é o motor do conhecimento. Faça uma pergunta!</h4>
                     </div>
                 

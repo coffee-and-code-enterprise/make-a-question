@@ -2,6 +2,7 @@
   --thickness: 300;
   max-width: 1200px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg);
@@ -26,11 +27,13 @@
   color: var(--text);
   font-weight: var(--thickness);
   user-select: none;
+  font-size: 1.25rem;
 }
 
 .logo {
   display: flex;
-  width: 120px;
+  width: 150px;
+  content: var(--full-logo);
 }
 
 .breakLine {
@@ -48,8 +51,8 @@
 
 .userIcon{
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
 }
 
 .dropdownBtn{
@@ -61,12 +64,20 @@
 .userInfo{
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   position: relative;
   user-select: none;
 }
 
 .userName{
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: var(--thickness);
+  color: var(--text);
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    justify-content: center;
+    gap: 20px;
+  }
 }

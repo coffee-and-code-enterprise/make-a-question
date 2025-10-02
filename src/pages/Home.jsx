@@ -19,7 +19,7 @@ function Home() {
     <main className={styles.homeContainer}>
       <section className={styles.search}>
         <h2>
-          <img src="/logos/logo_makeaquestion_white.png" alt="logo" />
+          <img className="full-logo" alt="logo" />
         </h2>
         <input type="text" placeholder="Faça uma pergunta..." />
       </section>

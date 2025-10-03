@@ -10,7 +10,7 @@ import {
 // Stylesheet
 import styles from "./Profile.module.css";
 
-// Criando o componente da Home:
+// Criando o componente do Perfil:
 function Profile() {
   const navigate = useNavigate();
   const location = useLocation();

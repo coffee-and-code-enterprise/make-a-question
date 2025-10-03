@@ -21,7 +21,7 @@ function Home() {
 	function isActive(path) {
 		return location.pathname === path ? styles.selected : "";
 	}
-
+	
 	return (
 		<main className={styles.homeMain}>
 			{/* Seção de busca */}

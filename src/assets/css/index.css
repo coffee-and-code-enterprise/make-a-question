@@ -72,10 +72,13 @@ p {
 }
 
 input {
-  border: 1px solid var(--text);
-  border-radius: 5px;
+  all: unset;
+  box-sizing: border-box;
+
   padding: 0.5rem 1rem;
   width: 100%;
+
+  background-color: var(--platinum);
 }
 
 .full-logo {
@@ -85,17 +88,21 @@ input {
 /* Mudando as cores dependendo do que tema do usuário */
 @media (prefers-color-scheme: dark) {
   /* Mudando as cores padrão */
-  /*:root {
+  :root {
     --text: #ffffff;
     --bg: #1a1a1a;
-    --question: url('/imgs/question-white.svg');
+    --question: url('/imgs/question_white.svg');
     --full-logo: url('/logos/logo_makeaquestion_white.png');
     --logo: url('/logos/logo_makeaquestion_white_center.png');
     
-  }*/
+  }
 
-  /* Mudando cores específicas */
-  /*h2 {
+   Mudando cores específicas */
+  h2 {
     color: var(--picton-blue);
-  }*/
+  }
+
+  input {
+    background-color: #4d4c4b;
+  }
 }

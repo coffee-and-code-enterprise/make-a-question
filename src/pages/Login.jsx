@@ -87,7 +87,7 @@ function Login() {
                   <input
                     type="text"
                     value={loginData.email}
-                    placeholder="Informe o seu email"
+                    placeholder="Insira seu e-mail"
                     className={styles.formInput}
                     onChange={(e) =>
                       setLoginData({
@@ -101,7 +101,7 @@ function Login() {
                   <input
                     type="password"
                     value={loginData.password}
-                    placeholder="Digite sua senha"
+                    placeholder="Insira sua senha"
                     className={styles.formInput}
                     onChange={(e) =>
                       setLoginData({
@@ -114,7 +114,7 @@ function Login() {
                   <button type="submit" className={styles.formSubmitButton}>
                     Entrar
                   </button>
-                  <Link to="/login/sign-up">Não possui conta?</Link>
+                  <Link to="/login/sign-up" replace>Não possui conta?</Link>
                 </form>
               </section>
             </div>
@@ -136,7 +136,7 @@ function Login() {
                   <input
                     className={styles.formInput}
                     type="text"
-                    placeholder="Nome"
+                    placeholder="Insira seu nome"
                     value={registerData.username}
                     onChange={(e) =>
                       setRegisterData({
@@ -151,7 +151,7 @@ function Login() {
                   <input
                     className={styles.formInput}
                     type="email"
-                    placeholder="Email"
+                    placeholder="Insira seu e-mail"
                     value={registerData.email}
                     onChange={(e) =>
                       setRegisterData({
@@ -166,7 +166,7 @@ function Login() {
                   <input
                     className={styles.formInput}
                     type="password"
-                    placeholder="Senha"
+                    placeholder="Insira sua senha"
                     value={registerData.pass}
                     onChange={(e) =>
                       setRegisterData({
@@ -181,7 +181,7 @@ function Login() {
                   <input
                     className={styles.formInput}
                     type="tel"
-                    placeholder="Telefone"
+                    placeholder="Insira seu telefone"
                     value={registerData.phone}
                     onChange={(e) =>
                       setRegisterData({
@@ -193,7 +193,7 @@ function Login() {
                   <button type="submit" className={styles.formSubmitButton}>
                     Entrar
                   </button>
-                  <Link to="/login">Já possui uma conta?</Link>
+                  <Link to="/login" replace>Já possui uma conta?</Link>
                 </form>
               </section>
             </div>

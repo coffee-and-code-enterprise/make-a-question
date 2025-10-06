@@ -23,10 +23,10 @@
   position: absolute;
   inset: 0;
 
-  background-color: #151515;
+  background-color: color-mix(in srgb, var(--bg) 20%, rgb(0, 0, 0));
   background-image: var(--question);
   background-size: 180px;
-  filter: brightness(0.2);
+  filter: brightness(1);
   animation: movingQuestion 7s linear infinite;
 
   z-index: -1;

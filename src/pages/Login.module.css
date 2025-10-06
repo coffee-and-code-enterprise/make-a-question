@@ -2,10 +2,10 @@ main#loginContainer {
   height: 100vh !important;
   align-items: center;
   justify-content: center;
-} 
+}
 
 main#loginContainer::before {
-  content: ''; /* Essential to generate the pseudo-element */
+  content: ""; /* Essential to generate the pseudo-element */
   position: absolute;
   width: 100%;
   height: 100%;
@@ -20,7 +20,9 @@ main#loginContainer::before {
   opacity: 0.1; /* Example filter: opacity */
 }
 
-
+main#loginContainer h2 {
+  margin-bottom: 10px;
+}
 
 @keyframes movingQuestion {
   0% {

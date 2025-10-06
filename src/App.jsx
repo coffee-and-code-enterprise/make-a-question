@@ -27,7 +27,7 @@ function App() {
 
 function Layout() {
   const location = useLocation();
-  const hideLayout = location.pathname === '/login';  // Se a tela for a de cadastro, ele esconderá o Header e o Footer
+  const hideLayout = location.pathname === '/login' || location.pathname === '/login/sign-up';  // Se a tela for a de cadastro, ele esconderá o Header e o Footer
 
   return (
     <>
@@ -36,7 +36,7 @@ function Layout() {
       <Routes>
         <Route path="/" element={<Introduction />} />
         <Route path="/answers/*" element={<Answers />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login/*" element={<Login />} />
         <Route path="/profile/*" element={<Profile />} />
         <Route path="/report-bugs" element={<ReportBugs />} />
         <Route path="/home/*" element={<Home />} />

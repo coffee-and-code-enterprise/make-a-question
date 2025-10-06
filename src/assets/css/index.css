@@ -25,7 +25,7 @@ no código, logo altere com CUIDADO.
   /* Criando variáveis para todo o site */
   --text: #333;
   --bg: #fafafa;
-  --question: url('/imgs/question_white.svg');
+  --question: url('/imgs/question.svg');
   --full-logo: url('/logos/logo_makeaquestion_black.png');
   --logo: url('/logos/logo_makeaquestion_black_center.png');
 

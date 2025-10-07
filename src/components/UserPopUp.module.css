@@ -18,19 +18,22 @@
   z-index: 2;
 }
 
-.popUpContainer>a {
-  background-color: var(--bg);
-  border-radius: 5px;
-  text-decoration: none;
-  user-select: none;
-  width: 100%;
-  text-align: center;
-  transition: background-color 0.2s;
-  padding: 5px 0px;
+.popUpContainer>a,
+.popUpContainer>button {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  border-radius: 5px !important;
+  text-decoration: none !important;
+  user-select: none !important;
+  width: 100% !important;
+  text-align: center !important;
+  transition: background-color 0.2s !important;
+  padding: 5px 0px !important;
 }
 
-.popUpContainer>a:hover {
-  background-color: var(--picton-blue);
+.popUpContainer>a:hover,
+.popUpContainer>button:hover {
+  background-color: var(--picton-blue) !important;
 }
 
 .popUpContainer button {
@@ -53,6 +56,8 @@ button#close {
 
 .userImage {
   border-radius: 50%;
+  width: 60px;
+  height: 60px;
 }
 
 .popUpContainer button.translate:hover {

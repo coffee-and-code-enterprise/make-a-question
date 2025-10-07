@@ -1,8 +1,9 @@
 // Dependencies
 import { useState, useEffect } from "react";
 import { useLocalStorage } from "@uidotdev/usehooks";
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import { Routes, Route, Link, useNavigate, replace } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth.js";
+import { createUser } from "../services/api.js";
 
 // Stylesheets
 import styles from "./Login.module.css";
@@ -12,7 +13,7 @@ function Login() {
   const [registerData, setRegisterData] = useState({
     username: "",
     email: "",
-    pass: "",
+    password: "",
     phone: "",
   });
   const [token] = useLocalStorage("token", null);
@@ -39,7 +40,7 @@ function Login() {
       // Renderiza a mensagem e atualiza o token no local storage
       alert("✅ Login realizado com sucesso!");
 
-      // Envia o usuário para tela de perfil
+      // Redireciona o usuário para tela de perfil
       navigate("/profile");
     } else {
       alert("❌ Email ou senha incorretos.");
@@ -54,18 +55,16 @@ function Login() {
     // Realiza a tentativa de criação de um novo usuário
     const result = await createUser(registerData);
 
-    console.log(result);
-
     // Verifica o resultado da operação
     if (result && result.message) {
-      setMessage(result.message);
+      alert("✅ Cadastro realizado com sucesso!");
 
       if (result && result.success) {
-        // Envia o usuário para tela de perfil
-        navigate("/profile");
+        // Redireciona o usuário para tela de login
+        navigate("/login", { replace: true });
       }
     } else {
-      setMessage("❌ Algo deu errado, tente novamente mais tarde.");
+      alert("❌ Algo deu errado, tente novamente mais tarde.");
     }
   };
 
@@ -78,7 +77,7 @@ function Login() {
             <div className={styles.formContainer}>
               <section className={styles.top}>
                 <h2>Login</h2>
-                <p>É bom te ver de novo.</p>
+                <p>É bom te ver de novo</p>
                 <p>Surgiu alguma dúvida?</p>
               </section>
               <section className={styles.bottom}>
@@ -130,7 +129,7 @@ function Login() {
                 <p>Surgiu alguma dúvida?</p>
               </section>
               <section className={styles.bottom}>
-                <form onSubmit="" className={styles.loginForm}>
+                <form onSubmit={handleSignup} className={styles.loginForm}>
                   <label className={styles.formLabel}>Usuário</label>
                   {/* Input do nome de usuário */}
                   <input
@@ -167,11 +166,11 @@ function Login() {
                     className={styles.formInput}
                     type="password"
                     placeholder="Insira sua senha"
-                    value={registerData.pass}
+                    value={registerData.password}
                     onChange={(e) =>
                       setRegisterData({
                         ...registerData,
-                        pass: e.target.value,
+                        password: e.target.value,
                       })
                     }
                     required
@@ -191,7 +190,7 @@ function Login() {
                     }
                   />
                   <button type="submit" className={styles.formSubmitButton}>
-                    Entrar
+                    Cadastrar
                   </button>
                   <Link to="/login" replace>Já possui uma conta?</Link>
                 </form>

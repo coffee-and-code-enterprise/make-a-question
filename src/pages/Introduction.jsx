@@ -19,7 +19,7 @@ function Introduction() {
           </div>
 
           <div className={styles.heroButtons}>
-            <Link to="/sign-up">
+            <Link to="/login">
               <button className={styles.linkButton}>Entrar</button>
             </Link>
             <a href="#rates" className={styles.arrowButton}>

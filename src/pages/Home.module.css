@@ -23,10 +23,9 @@
 
   input {
     position: absolute;
-
     background-color: var(--bg);
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--text);
     border-radius: 0px;
     padding-left: 40px;
     color: var(--text);

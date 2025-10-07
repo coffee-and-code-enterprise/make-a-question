@@ -1,30 +1,121 @@
 div.postContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
   width: 100%;
-  min-height: 200px;
+  min-height: 150px;
+  padding: 20px;
 
   background-color: color-mix(in srgb, var(--bg) 95%, black);
-
   border: 1px solid var(--text);
   border-radius: 10px;
-
   box-shadow: 1px 1px 5px rgb(201, 201, 201);
 }
 
 img.userImage {
   border-radius: 50%;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
+}
+
+div.postContainer hr {
+  width: 90%;
 }
 
 section.header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  width: 100%;
 }
 
-div.userArea {
+div.userArea,
+div.userInteraction {
   display: flex;
-  
+  gap: 15px;
+  align-items: center;
+}
+
+div.userArea > p {
+  font-size: 1.1rem;
+}
+
+button.interButton {
+  background: none;
+  border: 1px solid var(--text);
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+
+button.interButton:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+button.interButton:active {
+  transform: translateY(-4px);
+}
+
+button.interButton > * {
+  width: 20px;
+  height: 20px;
+}
+
+section.body {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+p.postMessage {
+  font-size: 1.25rem;
+}
+
+section.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+div.answerArea {
+  display: flex;
+  align-items: end;
+}
+
+button.sendAnswer {
+  background: none;
+  border: 1px solid var(--text);
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+
+textarea.answer {
+  width: 80%;
+  height: 2.5rem;
+  resize: none;
+  padding: 10px;
+  font-size: 1rem;
+  transition: height 0.25s ease-in-out;
+}
+
+textarea:focus {
+  height: 10rem;
+}
+
+button.showAnswers {
+  background: none;
+  border: none;
+  border-radius: 5px;
+  width: fit-content;
+  font-size: 1.05rem;
+}
+
+button.showAnswers:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 @media (prefers-color-scheme: dark) {

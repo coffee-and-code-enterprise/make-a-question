@@ -1,86 +1,90 @@
 // Dependencies
 import {
-	Routes,
-	Route,
-	Link,
-	useNavigate,
-	useLocation,
+  Routes,
+  Route,
+  Link,
+  useNavigate,
+  useLocation,
 } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 // Components
-import Post from '../components/Post.jsx'
+import Post from "../components/Post.jsx";
 
 // Stylesheet
 import styles from "./Home.module.css";
 
 // Componente principal da página Home
 function Home() {
-	const navigate = useNavigate();
-	const location = useLocation();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-	// Função utilitária para verificar se a rota está ativa
-	function isActive(path) {
-		return location.pathname === path ? styles.selected : "";
-	}
-	
-	return (
-		<main className={styles.homeMain}>
-			{/* Seção de busca */}
-			<section className={styles.search}>
-				<h2>
-					<img className="full-logo" alt="logo" />
-				</h2>
-				<div className={styles.searchBar}>
-					<FontAwesomeIcon
-						icon={faSearch}
-						className={styles.searchIcon}
-					/>
-					<input type="text" placeholder="Faça uma pergunta..." />
-				</div>
-			</section>
-			<section className={styles.filter}>
-				<Link to="/home" className={isActive("/home")} replace>Recomendados</Link>
-				<Link to="/home/foryou" className={isActive("/home/foryou")} replace>Para Você</Link>
-				<Link to="/home/recentcomments" className={isActive("/home/recentcomments")} replace>Recentes</Link>
-			</section>
+  // Função utilitária para verificar se a rota está ativa
+  function isActive(path) {
+    return location.pathname === path ? styles.selected : "";
+  }
 
-			<section className={styles.questions}>
-				<div className={styles.buttons}>
-					<Link to="#">
-						<button>Fazer uma pergunta</button>
-					</Link>
-					<Link to="#">
-						<button>Responder uma pergunta aleatória</button>
-					</Link>
-				</div>
-				<div className={styles.comments}>
-					<Routes>
-						<Route path="/" element={<QuestionList /> }/>
-						<Route path="foryou" element={<QuestionList />}/>
-						<Route
-							path="recentcomments"
-							element={<QuestionList />}
-						/>
-					</Routes>
-					<p>1 2 3 ... 218</p>
-				</div>
-			</section>
-		</main>
-	);
+  return (
+    <main className={styles.homeMain}>
+      {/* Seção de busca */}
+      <section className={styles.search}>
+        <h2>
+          <img className="full-logo" alt="logo" />
+        </h2>
+        <div className={styles.searchBar}>
+          <FontAwesomeIcon icon={faSearch} className={styles.searchIcon} />
+          <input type="text" placeholder="Faça uma pergunta..." />
+        </div>
+      </section>
+      <section className={styles.filter}>
+        <Link to="/home" className={isActive("/home")} replace>
+          Recomendados
+        </Link>
+        <Link to="/home/foryou" className={isActive("/home/foryou")} replace>
+          Para Você
+        </Link>
+        <Link
+          to="/home/recentcomments"
+          className={isActive("/home/recentcomments")}
+          replace
+        >
+          Recentes
+        </Link>
+      </section>
+
+      <section className={styles.questions}>
+        <div className={styles.buttons}>
+          <Link to="#">
+            <button>Fazer uma pergunta</button>
+          </Link>
+          <Link to="#">
+            <button>Responder uma pergunta aleatória</button>
+          </Link>
+        </div>
+        <div className={styles.comments}>
+          <Routes>
+            <Route path="/" element={<QuestionList />} />
+            <Route path="foryou" element={<QuestionList />} />
+            <Route path="recentcomments" element={<QuestionList />} />
+          </Routes>
+          <p>1 2 3 ... 218</p>
+        </div>
+      </section>
+    </main>
+  );
 }
 
 // Componente para renderizar a lista de perguntas de exemplo
 function QuestionList() {
-	const { quComponents, exComponent } = styles;
-	return (
-		<>
-			<Post />
-			<Post />
-			<Post />
-		</>
-	);
+  const { quComponents, exComponent } = styles;
+  return (
+    <>
+      <Post message="Como faço para fazer meu gato voltar a respirar? Enforquei ele sem querer..." />
+      <Post message="Gente, como faço para zerar o The?" />
+      <Post message="Como posso fazer para platinar o Peaggle e seus desafios?" />
+    </>
+  );
 }
 
 export default Home;

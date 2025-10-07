@@ -1,8 +1,8 @@
 //Dependencies
 import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth.js";
-import { useUser } from "../contexts/UserContext";
+import { useAuth } from "../../hooks/useAuth.js";
+import { useUser } from "../../contexts/UserContext.jsx";
 
 // Stylesheet
 import styles from "./UserPopUp.module.css";

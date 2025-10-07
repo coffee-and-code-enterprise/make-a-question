@@ -15,13 +15,8 @@ function Answers() {
 	return (
 		<main className={styles.hero}>
 			<section className={styles.heroContent}>
-				<a
-					onClick={() => navigate("/answers")}
-					className={location.pathname === "/answers" && styles.selected}
-				>Públicas</a>
-				<a onClick={() => navigate("/answers/anonymous")}
-					className={location.pathname === "/answers/anonymous" && styles.selected}
-				>Anônimas</a>
+				<Link to="/answers" className={location.pathname === "/answers" && styles.selected} replace>Públicas</Link>
+				<Link to="/answers/anonymous" className={location.pathname === "/answers/anonymous" && styles.selected} replace>Anônimas</Link>
 			</section>
 			<section className={styles.questions}>
 				<div className={styles.buttons}>

@@ -9,6 +9,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
+// Components
+import Post from '../components/Post.jsx'
+
 // Stylesheet
 import styles from "./Home.module.css";
 
@@ -38,21 +41,9 @@ function Home() {
 				</div>
 			</section>
 			<section className={styles.filter}>
-				<a
-					onClick={() => navigate("/home")}
-					className={isActive("/home")}>
-					Recomendados
-				</a>
-				<a
-					onClick={() => navigate("/home/foryou")}
-					className={isActive("/home/foryou")}>
-					Para Você
-				</a>
-				<a
-					onClick={() => navigate("/home/recentcomments")}
-					className={isActive("/home/recentcomments")}>
-					Recentes
-				</a>
+				<Link to="/home" className={isActive("/home")} replace>Recomendados</Link>
+				<Link to="/home/foryou" className={isActive("/home/foryou")} replace>Para Você</Link>
+				<Link to="/home/recentcomments" className={isActive("/home/recentcomments")} replace>Recentes</Link>
 			</section>
 
 			<section className={styles.questions}>
@@ -66,8 +57,8 @@ function Home() {
 				</div>
 				<div className={styles.comments}>
 					<Routes>
-						<Route path="/" element={<QuestionList />} />
-						<Route path="foryou" element={<QuestionList />} />
+						<Route path="/" element={<QuestionList /> }/>
+						<Route path="foryou" element={<QuestionList />}/>
 						<Route
 							path="recentcomments"
 							element={<QuestionList />}
@@ -84,12 +75,11 @@ function Home() {
 function QuestionList() {
 	const { quComponents, exComponent } = styles;
 	return (
-		<div className={quComponents}>
-			<div className={exComponent} />
-			<div className={exComponent} />
-			<div className={exComponent} />
-			<div className={exComponent} />
-		</div>
+		<>
+			<Post />
+			<Post />
+			<Post />
+		</>
 	);
 }
 

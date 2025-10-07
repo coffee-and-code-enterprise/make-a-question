@@ -1,7 +1,7 @@
 // Dependencies
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useUser } from "../contexts/UserContext";
+import { useUser } from "../../contexts/UserContext";
 
 // Components
 import UserPopUp from "./UserPopUp";

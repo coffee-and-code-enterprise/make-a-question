@@ -1,0 +1,35 @@
+div.postContainer {
+  width: 100%;
+  min-height: 200px;
+
+  background-color: color-mix(in srgb, var(--bg) 95%, black);
+
+  border: 1px solid var(--text);
+  border-radius: 10px;
+
+  box-shadow: 1px 1px 5px rgb(201, 201, 201);
+}
+
+img.userImage {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+section.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+div.userArea {
+  display: flex;
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  div.postContainer {
+    background-color: color-mix(in srgb, var(--bg) 95%, rgb(255, 255, 255));
+    box-shadow: none;
+  }
+}

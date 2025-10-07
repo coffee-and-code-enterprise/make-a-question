@@ -2,8 +2,8 @@
 import { useState, useEffect, cloneElement } from "react";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { Navigate } from "react-router-dom";
-import { authUser, getUserById } from "../services/api";
-import { useUser } from "../contexts/UserContext";
+import { authUser, getUserById } from "../../services/api";
+import { useUser } from "../../contexts/UserContext";
 
 function PrivateRoute({ children }) {
 	const [token, setToken] = useLocalStorage("token", null);

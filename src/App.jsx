@@ -1,7 +1,7 @@
 // Componentes
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
-import PrivateRoute from "./components/PrivateRoute.jsx";
+import Header from "./components/common/Header.jsx";
+import Footer from "./components/common/Footer.jsx";
+import PrivateRoute from "./components/logic/PrivateRoute.jsx";
 
 // Importando o estilo
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
@@ -16,6 +16,7 @@ import Answers from "./pages/Answers.jsx";
 import Login from "./pages/Login.jsx";
 import Profile from "./pages/Profile.jsx";
 import ReportBugs from "./pages/ReportBugs.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 function App() {
 	return (
@@ -51,6 +52,9 @@ function Layout() {
 							<Profile />
 						</PrivateRoute>
 					}/>
+
+				{/* ROTA CORINGA */}
+				<Route path="*" element={<NotFound />} />
 			</Routes>
 
 			{!hideLayout && <Footer />}

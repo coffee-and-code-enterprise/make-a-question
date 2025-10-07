@@ -41,23 +41,9 @@ function Profile() {
 				</a>
 			</section>
 			<section className={styles.sectionSelection}>
-				<a
-					onClick={() => navigate("/profile")}
-					className={location.pathname === "/profile" && styles.selected}>
-					Perguntas
-				</a>
-				<a
-					onClick={() => navigate("/profile/answers")}
-					className={
-						location.pathname === "/profile/answers" && styles.selected
-					}>
-					Respostas
-				</a>
-				<a
-					onClick={() => navigate("/profile/favs")}
-					className={location.pathname === "/profile/favs" && styles.selected}>
-					Favoritos
-				</a>
+				<Link to="/profile" className={location.pathname === "/profile" && styles.selected} replace>Perguntas</Link>
+				<Link to="/profile/answers" className={location.pathname === "/profile/answers" && styles.selected} replace>Respostas</Link>
+				<Link to="/profile/favs" className={location.pathname === "/profile/favs" && styles.selected} replace>Favoritos</Link>
 			</section>
 			<section id="questions" className={styles.questions}>
 				<div className={styles.buttons}>

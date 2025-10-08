@@ -1,3 +1,4 @@
+// Dependencies
 import {
 	Routes,
 	Route,
@@ -6,6 +7,10 @@ import {
 	useLocation
 } from "react-router-dom"
 
+// Components
+import QuestionButtons from "../components/common/QuestionButtons.jsx";
+
+// Stylesheets
 import styles from "./Answers.module.css";
 
 function Answers() {
@@ -19,14 +24,7 @@ function Answers() {
 				<Link to="/answers/anonymous" className={location.pathname === "/answers/anonymous" && styles.selected} replace>Anônimas</Link>
 			</section>
 			<section className={styles.questions}>
-				<div className={styles.buttons}>
-					<Link to={"#"}>
-						<button>Fazer uma pergunta</button>
-					</Link>
-					<Link to={"#"}>
-						<button>Responder uma pergunta aleatória</button>
-					</Link>
-				</div>
+				<QuestionButtons />
 				<div className={styles.comments}>
 					<Routes>
 						<Route

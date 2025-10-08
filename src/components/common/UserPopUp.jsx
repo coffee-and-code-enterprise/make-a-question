@@ -3,6 +3,7 @@ import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth.js";
 import { useUser } from "../../contexts/UserContext.jsx";
+import { useNavigate } from "react-router-dom";
 
 // Stylesheet
 import styles from "./UserPopUp.module.css";
@@ -13,7 +14,8 @@ import icon from "/imgs/icon_user.jpg";
 function UserPopUp({ visible, setter }) {
 	const popRef = useRef(null);
 	const { logout } = useAuth();
-	const { user } = useUser();
+	const { user, setUser } = useUser();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		function handleClickFora(event) {
@@ -53,7 +55,7 @@ function UserPopUp({ visible, setter }) {
 				<>
 					<Link to="/profile">Perfil</Link>
 					<Link to="/settings">Configurações</Link>
-					<button onClick={logout}>Sair</button>
+					<button onClick={() => {logout(); setUser(null); navigate("/")}}>Sair</button>
 				</>
 			) : (
         <>

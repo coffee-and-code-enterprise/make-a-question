@@ -4,7 +4,6 @@
   background-color: black;
 }
 
-
 .search {
   display: flex;
   flex-direction: column;
@@ -55,7 +54,7 @@
   a {
     font-size: 1.25rem;
     text-decoration: none;
-    color: #666; 
+    color: #666;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.3s;
     user-select: none;
@@ -68,7 +67,7 @@
 
   a.selected {
     border-bottom: 1px solid var(--text);
-    color: var(--text); 
+    color: var(--text);
   }
 }
 
@@ -127,7 +126,6 @@
   width: 100%;
 }
 
-
 /* Responsivity */
 @media (max-width: 768px) {
   .questions {
@@ -135,7 +133,7 @@
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .exComponent {
     width: 350px;
   }
@@ -145,14 +143,7 @@
   }
 
   .buttons button:hover {
-    width: 95%;  
+    width: 95%;
   }
 }
 
-/*
-@media (prefers-color-scheme: dark) {
-  .buttons button {
-    background-color: var(--picton-blue);
-  }
-}
-*/

@@ -64,12 +64,19 @@ button.interButton > * {
 
 section.body {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  gap: 10px;
   width: 100%;
 }
 
 p.postMessage {
   font-size: 1.25rem;
+}
+
+img.postImg {
+  border-radius: 10px;
+  max-width: 100%;
 }
 
 section.footer {

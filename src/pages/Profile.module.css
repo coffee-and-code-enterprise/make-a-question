@@ -111,13 +111,13 @@ section {
 }
 
 .questions {
-	display: grid;
-	grid: 1fr / 1fr 1fr 1fr;
-	max-width: 1200px;
-	padding: 2rem;
-	a {
-		display: contents;
-	}
+  display: grid;
+  grid: 1fr / 1fr 4fr 1fr;
+  max-width: 1200px;
+  padding: 2rem;
+  a {
+    display: contents;
+  }
 }
 
 .quComponents {

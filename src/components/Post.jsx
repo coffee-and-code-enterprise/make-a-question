@@ -7,8 +7,7 @@ import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
 // Stylesheets
 import styles from "./Post.module.css";
 
-function Post({ userImage, userName, message, imageUrl }) {
-  const post = "";
+function Post({ userId, userImage, userName, message, imageUrl }) {
 
   return (
     <div className={styles.postContainer}>
@@ -16,10 +15,10 @@ function Post({ userImage, userName, message, imageUrl }) {
         <div className={styles.userArea}>
           <img
             className={styles.userImage}
-            src={post?.user_image ? post?.user_image : "/imgs/icon_user.jpg"}
+            src={userImage ? userImage : "/imgs/icon_user.jpg"}
             alt="User IMG"
           />
-          <p>Username#1231</p>
+          <p>{userName ?? "Username"}#{userId ?? null}</p>
         </div>
         <div className={styles.userInteraction}>
           <button className={styles.interButton}>
@@ -33,6 +32,7 @@ function Post({ userImage, userName, message, imageUrl }) {
       <hr />
       <section className={styles.body}>
         <p className={styles.postMessage}>{message}</p>
+        {imageUrl && <img className={styles.postImg} src={imageUrl}/>}
       </section>
       <section className={styles.footer}>
         <textarea className={styles.answer} type="text" placeholder="Responda aqui" />

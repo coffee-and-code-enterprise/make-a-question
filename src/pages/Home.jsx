@@ -1,23 +1,18 @@
 // Dependencies
-import {
-  Routes,
-  Route,
-  Link,
-  useNavigate,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 // Components
-import Post from "../components/Post.jsx";
+import QuestionList from "../components/QuestionList.jsx";
+import QuestionButtons from "../components/common/QuestionButtons.jsx";
 
 // Stylesheet
 import styles from "./Home.module.css";
 
 // Componente principal da página Home
 function Home() {
-  const navigate = useNavigate();
+  // Navegação
   const location = useLocation();
 
   // Função utilitária para verificar se a rota está ativa
@@ -44,46 +39,22 @@ function Home() {
         <Link to="/home/foryou" className={isActive("/home/foryou")} replace>
           Para Você
         </Link>
-        <Link
-          to="/home/recentcomments"
-          className={isActive("/home/recentcomments")}
-          replace
-        >
+        <Link to="/home/recentcomments" className={isActive("/home/recentcomments")} replace>
           Recentes
         </Link>
       </section>
 
       <section className={styles.questions}>
-        <div className={styles.buttons}>
-          <Link to="#">
-            <button>Fazer uma pergunta</button>
-          </Link>
-          <Link to="#">
-            <button>Responder uma pergunta aleatória</button>
-          </Link>
-        </div>
+        <QuestionButtons />
         <div className={styles.comments}>
           <Routes>
             <Route path="/" element={<QuestionList />} />
             <Route path="foryou" element={<QuestionList />} />
             <Route path="recentcomments" element={<QuestionList />} />
           </Routes>
-          <p>1 2 3 ... 218</p>
         </div>
       </section>
     </main>
-  );
-}
-
-// Componente para renderizar a lista de perguntas de exemplo
-function QuestionList() {
-  const { quComponents, exComponent } = styles;
-  return (
-    <>
-      <Post message="Como faço para fazer meu gato voltar a respirar? Enforquei ele sem querer..." />
-      <Post message="Gente, como faço para zerar o The?" />
-      <Post message="Como posso fazer para platinar o Peaggle e seus desafios?" />
-    </>
   );
 }
 

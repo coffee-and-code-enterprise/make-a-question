@@ -1,0 +1,31 @@
+div.btnsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: fit-content;
+  padding: 5px 5px 5px 0px;
+
+  border-left: 2px solid var(--text);
+}
+
+button.questionBtn {
+  font-size: 1rem;
+  user-select: none;
+  background-color: var(--crayola-blue);
+  color: #fff;
+  width: 90%;
+  min-height: 4rem;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  transition: width 0.3s;
+}
+
+button.questionBtn:hover {
+  width: 100%;
+}
+
+button.questionBtn:active {
+  background-color: color-mix(in srgb, var(--crayola-blue) 80%, black)
+}

@@ -98,3 +98,28 @@ export const deleteUser = async (token) => {
 		return false;
 	}
 };
+
+
+
+// POSTS
+// Retorna todos os posts do banco de dados
+export const getPosts = async () => {
+	try {
+		const response = await api.get("/posts");
+		return response.data;
+	} catch (error) {
+		console.error("Erro ao buscar posts:", error);
+		return null;
+	}
+};
+
+// Retorna os posts pelo id de usuário
+export const getPostsById = async (id) => {
+	try {
+		const response = await api.get(`/posts/user/${id}`);
+		return response.data;
+	} catch (error) {
+		console.error("Erro ao buscar post:", error);
+		return null;
+	}
+};

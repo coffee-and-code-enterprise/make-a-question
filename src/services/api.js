@@ -7,11 +7,11 @@ const api = axios.create({
 	baseURL: API_BASE_URL,
 	headers: {
 		"Content-Type": "application/json",
-	}
+	},
 });
 
 // POST: método de login de usuário
-export const loginUser = async (userData) => {
+export const loginUser = async userData => {
 	try {
 		const response = await api.post("/auth", userData);
 		return response.data;
@@ -22,7 +22,7 @@ export const loginUser = async (userData) => {
 };
 
 // GET: método de verificação de login
-export const authUser = async (token) => {
+export const authUser = async token => {
 	try {
 		const response = await api.get("/auth", {
 			headers: {
@@ -48,7 +48,7 @@ export const getUsers = async () => {
 };
 
 // GET: buscar um usuário pelo ID
-export const getUserById = async (id) => {
+export const getUserById = async id => {
 	try {
 		const response = await api.get(`/users/${id}`);
 		return response.data;
@@ -59,7 +59,7 @@ export const getUserById = async (id) => {
 };
 
 // POST: criar um novo usuário
-export const createUser = async (userData) => {
+export const createUser = async userData => {
 	try {
 		const response = await api.post("/users", userData);
 		return response.data;
@@ -85,7 +85,7 @@ export const updateUser = async (userData, token) => {
 };
 
 // DELETE: remover usuário
-export const deleteUser = async (token) => {
+export const deleteUser = async token => {
 	try {
 		const result = await authUser(token);
 
@@ -98,8 +98,6 @@ export const deleteUser = async (token) => {
 		return false;
 	}
 };
-
-
 
 // POSTS
 // Retorna todos os posts do banco de dados
@@ -114,12 +112,32 @@ export const getPosts = async () => {
 };
 
 // Retorna os posts pelo id de usuário
-export const getPostsById = async (id) => {
+export const getPostsById = async id => {
 	try {
 		const response = await api.get(`/posts/user/${id}`);
 		return response.data;
 	} catch (error) {
 		console.error("Erro ao buscar post:", error);
+		return null;
+	}
+};
+
+// Cria um post
+export const createPost = async (postData, userId, token) => {
+	try {
+		const response = await api.post(
+			`/posts/user/${userId}`,
+			postData,
+			{
+				headers: {
+					"Authorization": `Bearer ${token}`,
+					"Content-Type": "multipart/form-data"
+				},
+			}
+		);
+		return response.data;
+	} catch (error) {
+		console.error("Erro ao criar post:", error);
 		return null;
 	}
 };

@@ -17,6 +17,7 @@ import Login from "./pages/Login.jsx";
 import Profile from "./pages/Profile.jsx";
 import ReportBugs from "./pages/ReportBugs.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import MakeAQuestion from "./pages/MakeAQuestion.jsx";
 
 function App() {
 	return (
@@ -49,10 +50,15 @@ function Layout() {
 
 				{/* ROTAS PROTEGIDAS */}
 				<Route path="/profile/*" element={
-						<PrivateRoute>
-							<Profile />
-						</PrivateRoute>
-					}/>
+					<PrivateRoute>
+						<Profile />
+					</PrivateRoute>
+				}/>
+				<Route path="/make-a-question" element={
+					<PrivateRoute>
+						<MakeAQuestion />
+					</PrivateRoute>
+				}/>
 
 				{/* ROTA CORINGA */}
 				<Route path="*" element={<NotFound />} />

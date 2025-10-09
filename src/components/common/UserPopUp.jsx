@@ -46,7 +46,7 @@ function UserPopUp({ visible, setter }) {
 							alt="user icon"
 						/>
 						<p>
-							<span>Olá</span>, {user?.username}!
+							Olá, <span>{user?.username}</span>!
 						</p>
 					</>
 				)}

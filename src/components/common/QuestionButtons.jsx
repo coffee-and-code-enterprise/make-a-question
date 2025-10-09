@@ -1,22 +1,26 @@
+// Dependencies
+import { useNavigate } from "react-router-dom";
+
 // Stylesheets
 import styles from "./QuestionButtons.module.css";
 
 // Componente dos botões
 function QuestionButtons() {
+  const navigate = useNavigate();
 
   function handleMakeQuestion(anonymous = false) {
     if (anonymous) {
-      alert('Pergunta anônima!')
+      alert('WIP')
     } else {
-      alert('Pergunta!')
+      navigate("/make-a-question");
     }
   }
 
   function handleAnswer(anonymous = false) {
     if (anonymous) {
-      alert('Resposta anônima!')
+      alert('WIP')
     } else {
-      alert('Resposta!')
+      navigate("/answers");
     }
   }
 

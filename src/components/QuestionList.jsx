@@ -62,6 +62,9 @@ function QuestionList({ userId, ppt = 5 }) {
     setPagesList(newPagesList);
   }
 
+  if (posts.length === 0) return (
+    <p>Nenhum post encontrado :(</p>
+  );
   return (
     <>
       {posts.slice((page - 1) * POSTS_POR_TELA, page * POSTS_POR_TELA).map((post, index) => {

@@ -46,7 +46,7 @@ function Layout() {
 				<Route path="/about" element={<About />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/introduction" element={<Introduction />} />
-				<Route path="/settings" element={<Settings />} />
+				<Route path="/settings/*" element={<Settings />} />
 
 				{/* ROTAS PROTEGIDAS */}
 				<Route path="/profile/*" element={

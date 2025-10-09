@@ -1,0 +1,206 @@
+main#stgMain {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  * {
+    user-select: none;
+  }
+}
+
+.sectionSelection {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 1rem 0;
+  a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #666;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  a:hover {
+    border-bottom: 1px solid var(--text);
+  }
+
+  a.selected {
+    border-bottom: 1px solid var(--text);
+    color: var(--text);
+  }
+}
+
+.stgContainer {
+  max-width: 1280px;
+  display: grid;
+  grid: 1fr / 1fr 4fr 1fr;
+  gap: 60px;
+}
+
+.stgContainer h3 {
+  font-size: 1.75rem;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.stgContainer h4 {
+  font-size: 1.25rem;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.stgContainer aside {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.settings hr {
+  width: 100%;
+}
+
+.settings section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.settings section > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.settings input[type="checkbox"] {
+  all: revert;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.settings input[type="text"],
+input[type="email"],
+input[type="password"] {
+  cursor: text;
+}
+
+.settings select {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+form.updateUser {
+  padding: 1rem;
+  border: 1px solid var(--text);
+  border-radius: 5px;
+}
+
+form.updateUser fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+form.updateUser legend {
+  padding: 0rem 1rem;
+}
+
+form.updateUser span {
+  color: rgb(247, 100, 100);
+}
+
+form.updateUser strong {
+  color: rgb(138, 138, 138);
+}
+
+.sendBtn {
+  background-color: var(--crayola-blue);
+  color: var(--text);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 300ms;
+  color: white;
+}
+
+.sendBtn:hover {
+  background-color: color-mix(in srgb, var(--crayola-blue) 80%, black);
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+}
+
+button.red {
+  background-color: rgb(211, 45, 45);
+}
+
+button.red:hover {
+  background-color: color-mix(in srgb, rgb(211, 45, 45) 80%, black);
+}
+
+fieldset.userImage {
+  align-items: center;
+  position: relative
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.imgContainer img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.imgContainer img:hover {
+  cursor: pointer;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  width: 1.5rem;
+  height: 1.5rem;
+
+  filter: drop-shadow(1px 1px 1px black);
+  pointer-events: none;
+  opacity: 0.6;
+  color: rgb(168, 168, 168);
+}
+
+.imgTrash {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translateX(-150%) translateY(-150%);
+  cursor: pointer;
+  color: var(--text);
+  transition: color 200ms;
+}
+
+.imgTrash:hover {
+  color: color-mix(in srgb, var(--text) 60%, var(--bg))
+}

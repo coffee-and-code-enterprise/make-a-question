@@ -132,8 +132,11 @@ function ProfileSettings() {
 			// Deletando o usuário
 			const result = await deleteUser(token);
 
+			// Para debugging do código 
+			console.log(result);
+
 			// Verifica o resultado da operação
-			if (result) {
+			if (result?.success) {
 				alert("✅ Usuário deletado com sucesso!");
 
 				// Limpa o token antigo
@@ -178,10 +181,10 @@ function ProfileSettings() {
 
 	const sendForm = async e => {
 		const dataToSend = new FormData();
-		formData.username && dataToSend.append("username", formData.username);
-		formData.email && dataToSend.append("email", formData.email);
-		formData.phone && dataToSend.append("phone", formData.phone);
-		formData.password && dataToSend.append("password", formData.password);
+		formData?.username && dataToSend.append("username", formData.username);
+		formData?.email && dataToSend.append("email", formData.email);
+		formData?.phone && dataToSend.append("phone", formData.phone);
+		formData?.password && dataToSend.append("password", formData.password);
 
 		if (formData.file) {
 			// Adicionado a imagem ao dataToSend

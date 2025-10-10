@@ -5,9 +5,6 @@ const API_BASE_URL = "http://localhost/maq-api/public";
 // Criando uma instância do Axios
 const api = axios.create({
 	baseURL: API_BASE_URL,
-	headers: {
-		"Content-Type": "application/json",
-	},
 });
 
 // POST: método de login de usuário
@@ -91,8 +88,8 @@ export const deleteUser = async token => {
 
 		if (!result?.userId) return null;
 
-		await api.delete(`/users/${result?.userId}`);
-		return true;
+		const response = await api.delete(`/users/${result?.userId}`);
+		return response.data;
 	} catch (error) {
 		console.error("Erro ao deletar usuário:", error);
 		return false;
@@ -125,16 +122,12 @@ export const getPostsById = async id => {
 // Cria um post
 export const createPost = async (postData, userId, token) => {
 	try {
-		const response = await api.post(
-			`/posts/user/${userId}`,
-			postData,
-			{
-				headers: {
-					"Authorization": `Bearer ${token}`,
-					"Content-Type": "multipart/form-data"
-				},
-			}
-		);
+		const response = await api.post(`/posts/user/${userId}`, postData, {
+			headers: {
+				Authorization: `Bearer ${token}`,
+				"Content-Type": "multipart/form-data",
+			},
+		});
 		return response.data;
 	} catch (error) {
 		console.error("Erro ao criar post:", error);

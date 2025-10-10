@@ -71,6 +71,7 @@ function QuestionList({ userId, ppt = 5 }) {
         return (
           <Post
             key={index}
+            postId={post.id}
             message={post.message}
             userId={post.user_id}
             userName={post.username}

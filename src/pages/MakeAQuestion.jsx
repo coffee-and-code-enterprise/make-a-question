@@ -71,6 +71,8 @@ function MakeAQuestion() {
 		// Realiza a tentativa de criação de um novo usuário
 		const result = await createPost(dataToSend, user.id, token);
 
+		console.log(result)
+
 		// Verifica o resultado da operação
 		if (result && result.message) {
 			alert("✅ Post criado com sucesso!");

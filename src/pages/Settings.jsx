@@ -1,5 +1,5 @@
 // Dependencies
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faCamera } from "@fortawesome/free-solid-svg-icons";
 import { useUser } from "../contexts/UserContext";

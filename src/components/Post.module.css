@@ -21,7 +21,7 @@ img.userImage {
 }
 
 div.postContainer hr {
-  width: 90%;
+  width: 100%;
 }
 
 section.header {
@@ -68,6 +68,7 @@ section.body {
   justify-content: space-between;
   gap: 10px;
   width: 100%;
+  max-height: 500px;
 }
 
 p.postMessage {
@@ -77,6 +78,10 @@ p.postMessage {
 img.postImg {
   border-radius: 10px;
   max-width: 100%;
+  max-height: 300px;
+  width: fit-content;
+  align-self: center;
+  object-fit: cover;  /* Mantém a proporção da imagem, cortando se necessário */
 }
 
 section.footer {

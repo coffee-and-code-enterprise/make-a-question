@@ -1,0 +1,59 @@
+div.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: all;
+  z-index: 100;
+  
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+div.CDContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px black;
+
+  background-color: color-mix(in srgb, var(--bg) 95%, var(--text));
+  border: 1px solid var(--text)
+}
+
+div.btnContainer {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+}
+
+div.btnContainer button {
+  background-color: var(--crayola-blue);
+  color: var(--text);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 300ms;
+  color: white;
+}
+
+div.btnContainer button.red {
+  background-color: rgb(211, 45, 45);
+}
+
+div.btnContainer button.red:hover {
+  background-color: color-mix(in srgb, rgb(211, 45, 45) 80%, black);
+}
+
+div.btnContainer button:hover {
+  background-color: color-mix(in srgb, var(--crayola-blue) 80%, black);
+}

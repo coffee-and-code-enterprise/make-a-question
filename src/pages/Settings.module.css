@@ -90,7 +90,8 @@ main#stgMain {
 
 .settings input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="phone"] {
   cursor: text;
 }
 

@@ -135,7 +135,6 @@ export const createPost = async (postData, userId, token) => {
 				},
 			}
 		);
-		console.log(response)
 		return response.data;
 	} catch (error) {
 		console.error("Erro ao criar post:", error);

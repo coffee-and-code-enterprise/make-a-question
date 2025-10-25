@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "https://maq-api.ct.ws/public";
+const API_BASE_URL = "https://maq-api.unaux.com/public";
 
 // Criando uma instância do Axios
 const api = axios.create({

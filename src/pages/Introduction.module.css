@@ -114,8 +114,31 @@ a{
 
 }
 
+.nameIcon {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
 .vini{
-    background-image: url("/imgs/vini.jpg");
+    background-image: url("/people/vini.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.gui{
+    background-image: url("/people/gui.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.caze{
+    background-image: url("/people/gus.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.em{
+    background-image: url("/people/manu.png");
     background-size: cover;
     background-position: center;
 }

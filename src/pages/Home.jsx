@@ -1,99 +1,61 @@
 // Dependencies
-import {
-  Routes,
-  Route,
-  Link,
-  useNavigate,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, Link, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
+// Components
+import QuestionList from "../components/QuestionList.jsx";
+import QuestionButtons from "../components/common/QuestionButtons.jsx";
 
 // Stylesheet
 import styles from "./Home.module.css";
 
-// Criando o componente da Home:
+// Componente principal da página Home
 function Home() {
-  const navigate = useNavigate();
+  // Navegação
   const location = useLocation();
 
+  // Função utilitária para verificar se a rota está ativa
+  function isActive(path) {
+    return location.pathname === path ? styles.selected : "";
+  }
+
   return (
-    <main className={styles.homeContainer}>
+    <main className={styles.homeMain}>
+      {/* Seção de busca */}
       <section className={styles.search}>
         <h2>
-          <img src="/logos/logo_makeaquestion_white.png" alt="logo" />
+          <img className="full-logo" alt="logo" />
         </h2>
-        <input type="text" placeholder="Faça uma pergunta..." />
+        <div className={styles.searchBar}>
+          <FontAwesomeIcon icon={faSearch} className={styles.searchIcon} />
+          <input type="text" placeholder="Faça uma pergunta..." />
+        </div>
       </section>
       <section className={styles.filter}>
-        <a
-          onClick={() => navigate("/home")}
-          className={location.pathname === "/home" && styles.selected}
-        >
+        <Link to="/home" className={isActive("/home")} replace>
           Recomendados
-        </a>
-        <a
-          onClick={() => navigate("/home/foryou")}
-          className={location.pathname === "/home/foryou" && styles.selected}
-        >
+        </Link>
+        <Link to="/home/foryou" className={isActive("/home/foryou")} replace>
           Para Você
-        </a>
-        <a
-          onClick={() => navigate("/home/recentcomments")}
-          className={location.pathname === "/home/recentcomments" && styles.selected}
-        >
+        </Link>
+        <Link to="/home/recentcomments" className={isActive("/home/recentcomments")} replace>
           Recentes
-        </a>
+        </Link>
       </section>
+
       <section className={styles.questions}>
-        <div className={styles.buttons}>
-          <Link to={"#"}>
-            <button>Fazer uma pergunta</button>
-          </Link>
-          <Link to={"#"}>
-            <button>Responder uma pergunta aleatória</button>
-          </Link>
+        <QuestionButtons />
+        <div className={styles.comments}>
+          <Routes>
+            <Route path="/" element={<QuestionList />} />
+            <Route path="foryou" element={<QuestionList />} />
+            <Route path="recentcomments" element={<QuestionList />} />
+          </Routes>
         </div>
-				<div className={styles.comments}>
-					<Routes>
-						<Route
-							path="/"
-							element={
-								<div className={styles.quComponents}>
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-								</div>
-							}
-						/>
-						<Route
-							path="foryou"
-							element={
-								<div className={styles.quComponents}>
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-								</div>
-							}
-						/>
-						<Route
-							path="recentcomments"
-							element={
-								<div className={styles.quComponents}>
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-									<div className={styles.exComponent} />
-								</div>
-							}
-						/>
-					</Routes>
-					<p>1 2 3 ... 218</p>
-				</div>
       </section>
     </main>
   );
 }
 
-// Exportando esse componente como padrão deste arquivo:
 export default Home;

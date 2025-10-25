@@ -13,10 +13,7 @@ no código, logo altere com CUIDADO.
   /* adicionando overflow-x */
   overflow-x: hidden;
 
-  /* Criando variáveis para todo o site */
-  --text: #333;
-  --bg: #fafafa;
-  --question: url('/imgs/question.svg');
+  min-width: 100vw;
 
   /* Cores que estão no nosso Miro */
   --marian-blue: #29447D;
@@ -25,6 +22,12 @@ no código, logo altere com CUIDADO.
   --platinum: #E7E4E1;
   --isabelline: #F3F2EE;
 
+  /* Criando variáveis para todo o site */
+  --text: #333;
+  --bg: #fafafa;
+  --question: url('/imgs/question.svg');
+  --full-logo: url('/logos/logo_makeaquestion_black.png');
+  --logo: url('/logos/logo_makeaquestion_black_center.png');
 
   /* Configurando as fontes */
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -60,7 +63,7 @@ main {
 }
 
 h2 {
-  color: var(--crayola-blue);
+  color: var(--marian-blue);
   font-size: 2.2rem;
 }
 
@@ -69,10 +72,17 @@ p {
 }
 
 input {
-  border: 1px solid var(--text);
-  border-radius: 5px;
+  all: unset;
+  box-sizing: border-box;
+
   padding: 0.5rem 1rem;
   width: 100%;
+
+  background-color: var(--platinum);
+}
+
+.full-logo {
+  content: var(--full-logo)
 }
 
 /* Mudando as cores dependendo do que tema do usuário */
@@ -81,11 +91,17 @@ input {
   :root {
     --text: #ffffff;
     --bg: #1a1a1a;
-    --question: url('/imgs/question-white.svg');
+    --question: url('/imgs/question_white.svg');
+    --full-logo: url('/logos/logo_makeaquestion_white.png');
+    --logo: url('/logos/logo_makeaquestion_white_center.png');
+    
   }
 
-  /* Mudando cores específicas */
   h2 {
     color: var(--picton-blue);
+  }
+
+  input {
+    background-color: #4d4c4b;
   }
 }

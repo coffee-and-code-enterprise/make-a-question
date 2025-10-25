@@ -1,0 +1,19 @@
+div.pages {
+  display: flex;
+  gap: 0.5rem;
+}
+
+div.pages p {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+div.pages p.active {
+  text-decoration: underline;
+}
+
+div.pages p:hover {
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--picton-blue);
+}
